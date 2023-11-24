@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.font-mont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bg-header-main {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("./imgs/bg-header.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-two-collegues {
+    background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("./imgs/colleagues\ 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-local-moving {
+    background-image: linear-gradient(270deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 95.22%), url("./imgs/local-moving.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center right;
+}
+
+.card {
+    border-radius: 60px;
+    background: rgba(66, 66, 65, 0.50);
+    backdrop-filter: blur(65px);
+}
+
+.arrow {
+    width: 55px;
+    height: 55px;
+    -webkit-mask: url("./imgs/arrow-long-white.svg") no-repeat center;
+    mask: url("./imgs/arrow-long-white.svg") no-repeat center;
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+#phone-icon {
+    width: 25px;
+    height: 25px;
+    -webkit-mask: url("./imgs/phone-icon.svg") no-repeat center;
+    mask: url("./imgs/phone-icon.svg") no-repeat center;
+}
+
+#location-icon {
+    width: 25px;
+    height: 25px;
+    -webkit-mask: url("./imgs/location-icon.svg") no-repeat center;
+    mask: url("./imgs/location-icon.svg") no-repeat center;
+}
+
+#email-icon {
+    width: 25px;
+    height: 25px;
+    -webkit-mask: url("./imgs/email-icon.svg") no-repeat center;
+    mask: url("./imgs/email-icon.svg") no-repeat center;
+}
+
+.blurred-primary-spot {
+    width: 400px;
+    height: 500px;
+    border-radius: 541.349px;
+    background: rgba(247, 203, 15, 0.20);
+    filter: blur(200px);
+}
+
+.scroll-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #F7CB0F80;
+    margin: 0 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scroll-dot.active {
+    background-color: #FFD700;
+}
+
+#galleryContainer::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+#galleryContainer::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.comments::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.comments::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+.pricing-list li {
+    list-style-image: url("./imgs/blue-tick.svg");
+}
+
+.container-lg {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-sm {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .container-sm {
+        width: 750px;
+    }
+
+    .container-lg {
+        width: 750px;
+    }
+}
+@media (min-width: 992px) {
+    .container-sm {
+        width: 970px;
+    }
+
+    .container-lg {
+        width: 970px;
+    }
+}
+@media (min-width: 1200px) {
+    .container-sm {
+        width: 1170px;
+    }
+
+    .container-lg {
+        width: 1600px;
+    }
+}

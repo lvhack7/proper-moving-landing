@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" >
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                colors: {
+                    primary: '#F7CB0F',
+                    secondary: '#0E50C5',
+                    light: '#F8EFEF',
+                    dark: '#1D1C1C'
+                }
+                }
+            }
+        }
+      </script>
+</head>
+<body class="relative bg-dark dark:bg-[#F8F2F2]">
+    <div class="absolute top-0 right-0">
+        <div class="blurred-primary-spot"></div>
+    </div>
+    <header class="bg-dark">
+        <div class="container-sm">
+            <nav class="flex items-center border-b border-[#F8EFEF73] justify-between w-full py-4">
+                <div class="flex">
+                    <img src="./imgs/logo.png" width="140">
+                </div>
+                <div class="hidden lg:flex">
+                    <ul class="flex items-center justify-between space-x-6">
+                        <li class="text-light font-light">
+                            <a>Home</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>About Us</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>Services</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>Moving Tips</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>Testimonials</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>Gallery</a>
+                        </li>
+                        <li class="text-light font-light">
+                            <a>Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                    <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="bg-dark dark:bg-[#F8F2F2]">
+        <section class="px-2 md:px-12 py-16">
+
+            <section class="relative card w-full">
+                <div class="absolute top-0 left-0">
+                    <div class="blurred-primary-spot"></div>
+                </div>
+                <div class="container-sm px-10 py-8 text-light">
+                    <p class="font-light text-sm mb-8">About Us</p>
+                    <p class="font-mont font-bold text-5xl uppercase mb-4">Why choose us.</p>
+                    <p class="max-w-[500px]">Because Proper Moving will make it easier for you to move to a new life with the features we have</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pr-4">
+                        <div class="bg-primary rounded-2xl px-4 pt-4 pb-8">
+                            <div class="flex gap-4">
+                                <div class="font-mont  text-6xl text-secondary font-bold">01</div>
+                                <div class="block">
+                                    <p class="text-xl text-secondary uppercase mb-4 font-semibold mt-3">Licensed, Bonded, and Insured</p>
+                                    <p class="text-gray-600">Our company meet all the rules and regulations. We have a trained and professional staff. We provide free basic insurance</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
+                            <div class="flex gap-4">
+                                <div class="font-mont text-6xl text-light font-bold">02</div>
+                                <div class="block">
+                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Transparency</p>
+                                    <p class="text-gray-300">We do not have any hidden fees. Being transparent about the fees is an important practice for us to build trust with our customers. If you have any specific questions feel free to email, call or text us!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
+                            <div class="flex gap-4">
+                                <div class="font-mont text-6xl text-light font-bold">03</div>
+                                <div class="block">
+                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Full Service</p>
+                                    <p class="text-gray-300">We have experience in handling all aspects of the move, from packing to unpacking, and can complete the tasks quickly and efficiently</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
+                            <div class="flex gap-4">
+                                <div class="font-mont text-6xl text-light font-bold">04</div>
+                                <div class="block">
+                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Affordable price</p>
+                                    <p class="text-gray-300">The mission of Proper Moving Company is to provide proper, best, efficient, and cheap moving services for an affordable move</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="relative card w-full mt-20">
+                <div class="absolute bottom-0 left-0">
+                    <div class="blurred-primary-spot"></div>
+                </div>
+                <div class="absolute top-1 right-0">
+                    <img class="w-[200px] md:w-[300px]" src="./imgs/Black.png">
+                </div>
+                <div class="container-sm px-10 py-8 text-light">
+                    <p class="font-light text-sm mb-8">About Us</p>
+                    <p class="font-mont font-bold text-5xl uppercase mb-4">
+                        <span class="text-primary">Proper moving</span> is one of <br> the best moving companies.
+                    </p>
+                    <p class="max-w-[600px] mb-10">Making ProPer Moving as one of the best companies in moving services by optimally serving the needs and interests of customers so that they are known in Los Angeles and other areas</p>
+                    <div class="flex flex-wrap gap-10 items-start">
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">5</span>
+                                <img src="./imgs/five-stars.png" width="150">
+                            </div>
+                            <p class="text-gray-300">Star rated <br>Yelp and Google</p>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">10+</span>
+                            </div>
+                            <p class="text-gray-300">Years experience</p>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">3M+</span>
+                            </div>
+                            <p class="text-gray-300">Happy clients</p>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">15+</span>
+                                
+                            </div>
+                            <p class="text-gray-300">Reputable realtor <br> work with</p>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">25</span>
+                                
+                            </div>
+                            <p class="text-gray-300">Schools</p>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-1">
+                                <span class="font-mont text-primary font-bold text-4xl">700</span>
+                                
+                            </div>
+                            <p class="text-gray-300 max-w-[200px]">Regular customers who can always rely on our loyalty</p>
+                        </div>
+                    </div>
+                    <div class="rounded-lg bg-two-collegues py-44 mt-8">
+                        <div class="flex items-center justify-center w-full h-full">
+                            <img class="hover:scale-105 hover:cursor-pointer" src="./imgs/play-btn.svg" width="60">
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section class="container-sm py-10">
+                <div class="flex flex-col space-y-4">
+                    <p class="font-mont text-light text-5xl font-bold uppercase dark:text-black">Our projects</p>
+                    <div class="grid grid-cols-3 grid-rows-1 gap-4">
+                        <div class="col-span-2 row-span-1">
+                            <div class="flex flex-col h-full">
+                                <div class="border-2 border-primary px-6 py-8 rounded-[30px]">
+                                    <p class="text-light dark:text-black">
+                                        We know that usually moving causes people to be stressed-out and nervous. Our aim is to eliminate this. Whether it is just one box or a huge house, we will meet your needs and treat you as a valued customer. We always want to exceed your expectations. If you are looking for proper and efficient moving services just call us, and 100 % satisfaction is guaranteed
+                                    </p>
+                                </div>
+                                <div class="grid grid-cols-2 gap-4 mt-4">
+                                    <div class="relative">
+                                        <div class="absolute bottom-0 left-0 w-full p-10 rounded-[30px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                            <p class="text-white font-bold text-3xl uppercase font-mont">Name of the project</p>
+                                        </div>
+                                        <img src="./imgs/projects/confident-handsome-guy-posing-against-white-wall.png" class="h-full rounded-[30px]">
+                                    </div>
+                                    <div class="relative">
+                                        <div class="absolute bottom-0 left-0 w-full p-10 rounded-[30px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                            <p class="text-white font-bold text-3xl uppercase font-mont">Name of the project</p>
+                                        </div>
+                                        <img src="./imgs/projects/medium-shot-woman-work-portrait.png" class="rounded-[30px] h-full">
+                                    </div>
+                                    
+                                </div>
+                            </div>        
+                        </div>
+                        <div class="col-span-1 row-span-1">
+                            <div class="flex flex-col h-full gap-4">
+                                <img src="./imgs/projects/young-businessman-crossing-arms-white-background 1.png" class="h-[50%] rounded-[30px]">
+                                <img src="./imgs/projects/medium-shot-woman-work-portrait-1.png" class="h-[50%] rounded-[30px]">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-primary rounded-[60px]">
+                <div class="container-sm py-10 px-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        <div class="text-secondary font-bold font-mont text-5xl uppercase">
+                            Please fill out a move request here:
+                        </div>
+                        <div class="flex flex-col justify-between">
+                            <div class="flex flex-col items-center -mt-4">
+                                <img src="./imgs/arrow-primary-form.svg" width="200" >
+                                <div class="max-w-[300px] text-lg font-medium mt-10">The fastest and easiest way to contact us for booking</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="py-10">
+            <div class="container-sm px-10 mb-10">
+                <p class="text-light font-bold text-5xl uppercase dark:text-black">GALLERY</p>
+            </div>
+            <div class="w-full">
+                <div class="overflow-x-auto" id="galleryContainer">
+                    <div class="flex items-center gap-4">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-1.jpeg" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-2.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-3.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-4.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-5.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-6.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-7.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-8.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-9.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-10.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" src="./imgs/gallery/gallery-11.png" aria-colspan="w-full h-full">
+                        <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-12.png" aria-colspan="w-full h-full">
+                    </div>
+                </div>
+                <div class="flex items-center justify-center mt-8">
+                    <div id="customScrollbar" class="flex items-center space-x-3">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="block pt-10">
+            <div class="container-sm px-10 mb-10">
+                <p class="text-light font-bold text-5xl uppercase max-w-[700px] dark:text-black">
+                    don't just take our word for it. see what our happy clients have to say:
+                </p>
+            </div>
+            <div id="comments" class="comments flex gap-4 w-full overflow-x-auto">
+                    
+            </div>
+        </section>
+
+        <section class="mt-2">
+            <div id="comments-1" class="comments flex gap-4 w-full overflow-x-auto">
+                
+            </div>
+        </section>
+
+        <footer class="mt-20 bg-dark">
+            <div class="border-t border-gray-300 py-10">
+                <div class="container-sm px-10">
+                    <div class="flex flex-wrap items-start justify-between gap-8">
+                        <div class="block text-light">
+                            <img src="./imgs/logo.png" width="140">
+                            <p class="mt-6 mb-3">License information:</p>
+                            <p class="uppercase">
+                                CAL-T MTR0192240 <br> USDOT 3478448 <br> CA571128
+                            </p>
+                        </div>
+                        <div class="hidden md:flex flex-col space-y-3">
+                            <a class="text-light text-lg">Quick Links</a>
+                            <a class="text-light text-lg">Home</a>
+                            <a class="text-light text-lg">About Us</a>
+                            <a class="text-light text-lg">Gallery</a>
+                            <a class="text-light text-lg">Contact</a>
+                            <a class="text-light text-lg">Testimonials</a>
+                        </div>
+                        <div class="hidden md:flex flex-col space-y-3">
+                            <a class="text-light text-lg">Our Services</a>
+                            <a class="text-light text-lg">Local moving</a>
+                            <a class="text-light text-lg">Local-distance</a>
+                            <a class="text-light text-lg">Commercial moving</a>
+                            <a class="text-light text-lg">Packing and unpacking</a>
+                            <a class="text-light text-lg">Moving labor</a>
+                            <a class="text-light text-lg">Delivery</a>
+                        </div>
+                        <div class="flex flex-col space-y-4">
+                            <div class="flex items-center space-x-3 text-light text-lg">
+                                <img src="./imgs/phone-icon.svg" width="20" >
+                                <p>(424) 394-6616</p>
+                            </div>
+                            <div class="flex items-center space-x-3 text-light text-lg">
+                                <img src="./imgs/location-icon.svg" width="20" >
+                                <p>909 West Temple Street <br> Los Angeles, CA 90012 USA</p>
+                            </div>
+                            <div class="flex items-center space-x-3 text-light text-lg">
+                                <img src="./imgs/email-icon.svg" width="20" >
+                                <p>info@prop-mov.com</p>
+                            </div>
+                            <p class="text-light text-lg">Monday - Sunday: 7 AM – 9 PM</p>
+                        </div>
+                        <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="./script.js" ></script>
+</body>
+</html>
