@@ -3,6 +3,7 @@
 
 html, body {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .font-mont {
@@ -10,7 +11,7 @@ html, body {
 }
 
 .bg-header-main {
-    background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url("./imgs/bg-header.png");
+    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7) ), url("./imgs/bg-header.png");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -22,16 +23,61 @@ html, body {
 }
 
 .bg-local-moving {
-    background-image: linear-gradient(270deg, #D9D9D9 0%, rgba(217, 217, 217, 0.00) 95.22%), url("./imgs/local-moving.png");
+    background-image: url("./imgs/bg-local-moving.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 30px 30px 0px;
+    background-position: right;
+}
+
+.bg-commercial-moving {
+    background-image: url("./imgs/commercial-moving.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 30px 30px 0px;
+    background-position: right;
+}
+
+.bg-packing-unpacking {
+    background-image: url("./imgs/packing-and-packing.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 30px 30px 0px;
+    background-position: right;
+}
+
+.bg-moving-labor {
+    background-image: url("./imgs/moving-labor.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 30px 30px 0px;
+    background-position: right;
+}
+
+.bg-delivery {
+    background-image: url("./imgs/delivery-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0px 30px 30px 0px;
+    background-position: right;
+}
+
+.bg-our-company {
+    background-image: url("./imgs/our-company.png");
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: center right;
+    background-position: right;
 }
 
 .card {
     border-radius: 60px;
     background: rgba(66, 66, 65, 0.50);
     backdrop-filter: blur(65px);
+}
+
+.menu-wrapper {
+    transition: 1s ease-in-out;
+    top: 0;
 }
 
 .arrow {
@@ -88,11 +134,11 @@ html, body {
     background-color: #FFD700;
 }
 
-#galleryContainer::-webkit-scrollbar {
+.no-scrollbar::-webkit-scrollbar {
     width: 0.5em;
 }
 
-#galleryContainer::-webkit-scrollbar-thumb {
+.no-scrollbar::-webkit-scrollbar-thumb {
     background-color: transparent;
 }
 
@@ -124,28 +170,27 @@ html, body {
 
 @media (min-width: 768px) {
     .container-sm {
-        width: 750px;
-    }
-
-    .container-lg {
-        width: 750px;
+        width: 720px;
     }
 }
+
 @media (min-width: 992px) {
     .container-sm {
-        width: 970px;
+        width: 960px;
     }
 
-    .container-lg {
-        width: 970px;
-    }
 }
+
 @media (min-width: 1200px) {
     .container-sm {
-        width: 1170px;
+        width: 1140px;
     }
 
-    .container-lg {
-        width: 1600px;
+}
+
+@media (min-width: 1400px) {
+    .container-sm {
+        width: 1320px;
     }
+
 }

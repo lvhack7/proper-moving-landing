@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home - Proper Moving</title>
+    <link rel="icon" type="image/x-icon" href="/imgs/home-deliver.png">
     <link rel="stylesheet" href="./style.css" >
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -26,37 +27,40 @@
     <header class="bg-header-main">
         <div class="container-sm">
             <nav class="flex items-center border-b border-[#F8EFEF73] justify-between w-full py-4">
-                <div class="flex">
+                <a href="/index.html" class="flex">
                     <img src="./imgs/logo.png" width="140">
-                </div>
-                <div class="hidden lg:flex">
-                    <ul class="flex items-center justify-between space-x-6">
-                        <li class="text-light font-light">
+                </a>
+                <div class="hidden xl:flex">
+                    <ul class="flex items-center justify-between space-x-3 xl:space-x-6">
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/index.html">Home</a>
                         </li>
-                        <li class="text-light font-light">
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/our-company.html">About Us</a>
                         </li>
-                        <li class="text-light font-light">
-                            <a href="#">Services</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
+                            Services
                         </li>
-                        <li class="text-light font-light">
-                            <a href="#">Moving Tips</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                            <a href="/moving-tips.html">Moving Tips and FAQs</a>
                         </li>
-                        <li class="text-light font-light">
-                            <a href="#">Testimonials</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
+                            Testimonials
                         </li>
-                        <li class="text-light font-light">
-                            <a href="#">Gallery</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('gallery')">
+                            Gallery
                         </li>
-                        <li class="text-light font-light">
-                            <a href="#">Contact</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" >
+                            <a href="/contact.html">Contact</a>
                         </li>
                     </ul>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                <div class="hidden xl:flex items-center space-x-4">
+                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</button>
                     <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
+                </div>
+                <div class="xl:hidden flex hover:cursor-pointer hover:scale-105" onclick="toggleMenu()">
+                    <img src="./imgs/menu-icon.svg" width="45" >
                 </div>
             </nav>
             <section class="py-20 md:py-32 mx-auto">
@@ -68,8 +72,8 @@
                     <div>
                         <div class="block">
                             <p class="text-light text-lg mb-4 max-w-[300px]">The fastest and easiest way to contact us for booking</p>
-                            <button class="flex items-center bg-primary text-secondary text-md px-10 py-4 rounded-full font-semibold">
-                                CONTACT US <img class="ml-2" src="./imgs/arrow-right-primary.svg" width="15" >
+                            <button class="flex items-center bg-primary text-secondary text-md px-10 py-4 rounded-full space-x-2 font-semibold hover:space-x-4 hover:scale-105">
+                                <span>CONTACT US</span> <img src="./imgs/arrow-right-primary.svg" width="15" >
                             </button>
                         </div>
                     </div>
@@ -93,7 +97,7 @@
                             <div class="flex gap-4">
                                 <div class="font-mont  text-6xl text-secondary font-bold">01</div>
                                 <div class="block">
-                                    <p class="text-xl text-secondary uppercase mb-4 font-semibold mt-3">Licensed, Bonded, and Insured</p>
+                                    <p class="text-xl text-secondary uppercase mb-4 font-semibold mt-3">Licensed and Insured</p>
                                     <p class="text-gray-600">Our company meet all the rules and regulations. We have a trained and professional staff. We provide free basic insurance</p>
                                 </div>
                             </div>
@@ -135,8 +139,8 @@
                 <div class="absolute bottom-0 left-0">
                     <div class="blurred-primary-spot"></div>
                 </div>
-                <div class="absolute top-1 right-0">
-                    <img class="w-[200px] md:w-[300px]" src="./imgs/Black.png">
+                <div class="absolute top-1 right-1 -z-10">
+                    <img class="w-[150px] md:w-[250px]" src="./imgs/home-deliver.png">
                 </div>
                 <div class="container-sm px-10 py-8 text-light">
                     <p class="font-light text-sm mb-8">About Us</p>
@@ -195,77 +199,90 @@
                 
             </section>
 
-            <section class="relative py-20 px-2 md:px-12">
-                <div class="absolute bottom-[50%] left-0">
-                    <div class="blurred-primary-spot"></div>
-                </div>
-                <div class="container-sm text-light dark:text-black">
-                    <p class="font-light text-sm mb-6">Our Services</p>
-                    <p class="font-mont font-bold text-4xl md:text-5xl uppercase mb-4">Your stress-free move <br>starts here!</p>
-                    <p class="max-w-[600px]">We offer a variety of services to assist individuals and businesses with their relocation needs. Some common services provided by ProPer include:</p>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
-                        <div>
-                            <img class="rounded-2xl" src="./imgs/colleagues 3.png" >
-                        </div>
-                        <div class="flex flex-col">
-                            <div class="relative border-t border-b border-gray-300 py-4">
-                                <div data-content="cont-1" class="arrow absolute top-3 right-3 bg-white dark:bg-black"></div>
-                                <div class="block space-y-4 text-light dark:text-black">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Local</span> moving</p>
-                                    <div id="cont-1" class="block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Local moving is a service that provided by moving company with relocating your belongings from one location to another within a relatively short distance, typically within the same city or between cities. These services are valuable for individuals that are changing residences but do not require long-distance or interstate moving</p>
-                                        <a href="/local-moving.html" class="bg-transparent border-2 border-primary rounded-full px-8 py-3 text-lg">Learn more</a>
-                                    </div>
-                                    
-                                </div>
+            <section id="services">
+                <div class="relative py-20 px-2 md:px-12">
+                    <div class="absolute bottom-[50%] left-0">
+                        <div class="blurred-primary-spot"></div>
+                    </div>
+                    <div class="container-sm text-light dark:text-black">
+                        <p class="font-light text-sm mb-6">Our Services</p>
+                        <p class="font-mont font-bold text-4xl md:text-5xl uppercase mb-4 dark:text-dark">Your stress-free move <br>starts here!</p>
+                        <p class="max-w-[600px] dark:text-dark">We offer a variety of services to assist individuals and businesses with their relocation needs. Some common services provided by ProPer include:</p>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-8">
+                            <div>
+                                <img class="rounded-2xl" src="./imgs/colleagues 3.png" >
                             </div>
-                            <div class="relative border-b border-gray-300 py-4">
-                                <div data-content="cont-2" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
-                                <div  class="block space-y-4 text-light">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Local distance</span> <br> moving</p>
-                                    <div id="cont-2" class="hidden block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Local moving is a service that provided by moving company with relocating your belongings from one location to another within a relatively short distance, typically within the same city or between cities. These services are valuable for individuals that are changing residences but do not require long-distance or interstate moving</p>
-                                        <button class="bg-transparent border-2 border-primary rounded-full px-8 py-3 text-lg dark:text-black">Learn more</button>
+                            <div class="flex flex-col">
+                                <div class="relative border-t border-b border-gray-300 py-4">
+                                    <div data-content="cont-1" class="arrow absolute top-1 right-3 bg-white dark:bg-black"></div>
+                                    <div class="block space-y-4 text-light dark:text-black">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Local</span> moving</p>
+                                        <div id="cont-1" class="flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Local moving is a service that provided by moving company with relocating your belongings from one location to another within a relatively short distance, typically within the same city or between cities. These services are valuable for individuals that are changing residences but do not require long-distance or interstate moving</p>
+                                            <div class="flex justify-start">
+                                                <a href="/local-moving.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="relative border-b border-gray-300 py-4">
-                                <div data-content="cont-3" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
-                                <div  class="block space-y-4 text-light">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Commercial</span> <br> moving</p>
-                                    <div id="cont-3" class="hidden block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Commercial moving services are specialized services that help businesses and organizations relocate their office spaces, warehouses, or other commercial properties. These services are designed to make the process of moving a business as smooth and efficient as possible</p>
-                                        <button class="bg-transparent border-2 border-primary rounded-full px-8 py-3 text-lg dark:text-black">Learn more</button>
+                                <div class="relative border-b border-gray-300 py-4">
+                                    <div data-content="cont-2" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
+                                    <div  class="block space-y-4 text-light">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Long-Distance</span> <br> moving</p>
+                                        <div id="cont-2" class="hidden flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Local moving is a service that provided by moving company with relocating your belongings from one location to another within a relatively short distance, typically within the same city or between cities. These services are valuable for individuals that are changing residences but do not require long-distance or interstate moving</p>
+                                            <div class="flex justify-start">
+                                                <a href="/long-distance-moving.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="relative border-b border-gray-300 py-4">
-                                <div data-content="cont-4" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
-                                <div  class="block space-y-4 text-light">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Packing</span> <br> moving</p>
-                                    <div id="cont-4" class="hidden block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Professional movers will assist in packing up the entire office, including furniture, equipment, documents, and other assets. They use appropriate packing materials to ensure the safe transport of items. At the new location, they will help unpack and set up the office as per the plan</p>
-                                        <button class="bg-transparent border-2 border-primary dark:text-black rounded-full px-8 py-3 text-lg">Learn more</button>
+                                <div class="relative border-b border-gray-300 py-4">
+                                    <div data-content="cont-3" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
+                                    <div  class="block space-y-4 text-light">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Commercial</span> <br> moving</p>
+                                        <div id="cont-3" class="hidden flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Commercial moving services are specialized services that help businesses and organizations relocate their office spaces, warehouses, or other commercial properties. These services are designed to make the process of moving a business as smooth and efficient as possible</p>
+                                            <div class="flex justify-start">
+                                                <a href="/commercial-moving.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="relative border-b border-gray-300 py-4">
-                                <div data-content="cont-5" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
-                                <div class="block space-y-4 text-light">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Moving <br>labor</span></p>
-                                    <div id="cont-5" class="hidden block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">This service is ideal for situations where you need assistance with physical labor, such as loading and unloading your belongings from a truck, pod, or rearranging furniture within your home or moving within the same building. Labor-only services provide the manpower and expertise to handle the heavy lifting and physical aspects of the move without providing the transportation or logistics</p>
-                                        <button class="bg-transparent border-2 border-primary dark:text-black rounded-full px-8 py-3 text-lg">Learn more</button>
+                                <div class="relative border-b border-gray-300 py-4">
+                                    <div data-content="cont-4" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
+                                    <div  class="block space-y-4 text-light">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Packing</span> <br> moving</p>
+                                        <div id="cont-4" class="hidden flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">Professional movers will assist in packing up the entire office, including furniture, equipment, documents, and other assets. They use appropriate packing materials to ensure the safe transport of items. At the new location, they will help unpack and set up the office as per the plan</p>
+                                            <div class="flex justify-start">
+                                                <a href="/packing-and-unpacking.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="relative border-b border-gray-300 py-4">
-                                <div data-content="cont-6" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
-                                <div class="block space-y-4 text-light">
-                                    <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Delivery</span></p>
-                                    <div id="cont-6" class="hidden block space-y-4">
-                                        <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">A delivery service is a service that provides transportation services for goods, whether it's moving household items, furniture, or delivering packages and cargo. These services can be used for various purposes, including residential and commercial moving, furniture delivery, and transporting items from one location to another</p>
-                                        <button class="bg-transparent border-2 border-primary dark:text-black rounded-full px-8 py-3 text-lg">Learn more</button>
+                                <div class="relative border-b border-gray-300 py-4">
+                                    <div data-content="cont-5" class="arrow absolute top-3 right-3 rotate-90 bg-white dark:bg-black"></div>
+                                    <div class="block space-y-4 text-light">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Moving <br>labor</span></p>
+                                        <div id="cont-5" class="hidden flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">This service is ideal for situations where you need assistance with physical labor, such as loading and unloading your belongings from a truck, pod, or rearranging furniture within your home or moving within the same building. Labor-only services provide the manpower and expertise to handle the heavy lifting and physical aspects of the move without providing the transportation or logistics</p>
+                                            <div class="flex justify-start">
+                                                <a href="/moving-labor.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative border-b border-gray-300 py-4">
+                                    <div data-content="cont-6" class="arrow absolute top-1 right-3 rotate-90 bg-white dark:bg-black"></div>
+                                    <div class="block space-y-4 text-light">
+                                        <p class="text-3xl font-bold text-light uppercase dark:text-black"><span class="text-primary">Delivery</span></p>
+                                        <div id="cont-6" class="hidden flex flex-col space-y-4">
+                                            <p class="text-gray-300 text-sm max-w-[500px] dark:text-black">A delivery service is a service that provides transportation services for goods, whether it's moving household items, furniture, or delivering packages and cargo. These services can be used for various purposes, including residential and commercial moving, furniture delivery, and transporting items from one location to another</p>
+                                            <div class="flex justify-start">
+                                                <a href="/delivery.html" class="bg-transparent border border-primary rounded-full px-8 py-2 text-lg hover:scale-105 dark:text-dark">Learn more</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -273,6 +290,7 @@
                     </div>
                 </div>
             </section>
+            
 
             <section class="bg-primary rounded-[60px]">
                 <div class="container-sm py-10 px-10">
@@ -291,14 +309,14 @@
             </section>
         </section>
 
-        <section class="py-10">
-            <div class="container-sm px-10 mb-10">
+        <section id="gallery" class="py-8 md:py-10">
+            <div class="container-sm px-10 mb-8">
                 <p class="text-light font-bold text-4xl md:text-5xl uppercase dark:text-black">GALLERY</p>
             </div>
             <div class="w-full">
-                <div class="overflow-x-auto" id="galleryContainer">
-                    <div class="flex items-center gap-4 px-4">
-                        <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-1.jpeg" width="320">
+                <div class="overflow-x-auto no-scrollbar" id="galleryContainer">
+                    <div class="flex gap-4 px-4">
+                        <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-1.png" width="320">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-2.png" width="550">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-3.png" width="550">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-4.png" width="305">
@@ -312,7 +330,7 @@
                         <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-12.png" width="565">
                     </div>
                 </div>
-                <div class="flex items-center justify-center mt-8">
+                <div class="flex items-center justify-center mt-4 md:mt-8">
                     <div id="customScrollbar" class="flex items-center space-x-3">
                         
                     </div>
@@ -337,56 +355,103 @@
             </div>
         </section>
 
-        <footer class="mt-20 bg-dark">
-            <div class="border-t border-gray-300 py-10">
-                <div class="container-sm px-10">
-                    <div class="flex flex-wrap items-start justify-between gap-8">
-                        <div class="block text-light">
-                            <img src="./imgs/logo.png" width="140">
-                            <p class="mt-6 mb-3">License information:</p>
-                            <p class="uppercase">
-                                CAL-T MTR0192240 <br> USDOT 3478448 <br> CA571128
-                            </p>
-                        </div>
-                        <div class="hidden md:flex flex-col space-y-3">
-                            <a class="text-light text-lg">Quick Links</a>
-                            <a class="text-light text-lg">Home</a>
-                            <a class="text-light text-lg">About Us</a>
-                            <a class="text-light text-lg">Gallery</a>
-                            <a class="text-light text-lg">Contact</a>
-                            <a class="text-light text-lg">Testimonials</a>
-                        </div>
-                        <div class="hidden md:flex flex-col space-y-3">
-                            <a class="text-light text-lg">Our Services</a>
-                            <a class="text-light text-lg">Local moving</a>
-                            <a class="text-light text-lg">Local-distance</a>
-                            <a class="text-light text-lg">Commercial moving</a>
-                            <a class="text-light text-lg">Packing and unpacking</a>
-                            <a class="text-light text-lg">Moving labor</a>
-                            <a class="text-light text-lg">Delivery</a>
-                        </div>
-                        <div class="flex flex-col space-y-4">
-                            <div class="flex items-center space-x-3 text-light text-lg">
-                                <img src="./imgs/phone-icon.svg" width="20" >
-                                <p>(424) 394-6616</p>
-                            </div>
-                            <div class="flex items-center space-x-3 text-light text-lg">
-                                <img src="./imgs/location-icon.svg" width="20" >
-                                <p>909 West Temple Street <br> Los Angeles, CA 90012 USA</p>
-                            </div>
-                            <div class="flex items-center space-x-3 text-light text-lg">
-                                <img src="./imgs/email-icon.svg" width="20" >
-                                <p>info@prop-mov.com</p>
-                            </div>
-                            <p class="text-light text-lg">Monday - Sunday: 7 AM – 9 PM</p>
-                        </div>
-                        <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </main>
 
+    <footer class="mt-20 bg-dark">
+        <div class="border-t border-[#F8EFEF73] py-10">
+            <div class="container-sm px-10">
+                <div class="flex flex-wrap items-start justify-between gap-8">
+                    <div class="block text-light">
+                        <img src="./imgs/logo.png" width="140">
+                        <p class="mt-6 mb-3">License information:</p>
+                        <p class="uppercase">
+                            CAL-T MTR0192240 <br> USDOT 3478448 <br> CA571128
+                        </p>
+                    </div>
+                    <div class="hidden md:flex flex-col space-y-3">
+                        <a class="text-light font-light hover:cursor-pointer hover:underline">Quick Links</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="/index.html">Home</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="/our-company.html">About Us</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" onclick="scrollInto('gallery')">Gallery</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="/contact.html">Contact</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" onclick="scrollInto('comments')">Testimonials</a>
+                    </div>
+                    <div class="hidden md:flex flex-col space-y-3">
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" onclick="scrollInto('services')">Our Services</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./local-moving.html">Local moving</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./long-distance-moving.html">Local-distance</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./commercial-moving.html">Commercial moving</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./packing-and-unpacking.html">Packing and unpacking</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./moving-labor.html">Moving labor</a>
+                        <a class="text-light font-light hover:cursor-pointer hover:underline" href="./delivery.html">Delivery</a>
+                    </div>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex items-center space-x-3 text-light">
+                            <img src="./imgs/phone-icon.svg" width="20" >
+                            <p>(424) 394-6616</p>
+                        </div>
+                        <div class="flex items-center space-x-3 text-light">
+                            <img src="./imgs/location-icon.svg" width="20" >
+                            <p>909 West Temple Street <br> Los Angeles, CA 90012 USA</p>
+                        </div>
+                        <div class="flex items-center space-x-3 text-light">
+                            <img src="./imgs/email-icon.svg" width="20" >
+                            <p>info@prop-mov.com</p>
+                        </div>
+                        <p class="text-light">Monday - Sunday: 7 AM – 9 PM</p>
+                    </div>
+                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="mobile-menu" class="hidden absolute z-20 top-0 left-0 w-full h-screen bg-dark p-2">
+        <div class="container-sm relative h-full">
+            <div class="flex items-center justify-between py-8">
+                <img src="./imgs/logo.png" width="150">
+                <button onclick="toggleMenu()">
+                    <img src="./imgs/close-icon.svg" width="40">
+                </button>
+            </div>
+            
+            <ul class="flex flex-col space-y-6">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                    <a href="/index.html">Home</a>
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                    <a href="/our-company.html">About Us</a>
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
+                    Services
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                    <a href="/moving-tips.html">Moving Tips and FAQs</a>
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
+                    Testimonials
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('gallery')">
+                    Gallery
+                </li>
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
+                    <a href="/contact.html">Contact</a>
+                </li>
+            </ul>
+            
+            <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold mt-4 hover:scale-105">GET A QUOTE</button>          
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+      // Check for the query parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get('id');
+            
+      scrollInto(id)
+    });
+    </script>
     <script src="./script.js" ></script>
 </body>
 </html>

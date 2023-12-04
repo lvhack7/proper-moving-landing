@@ -131,199 +131,241 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
-const arrows = document.querySelectorAll('.arrow')
-arrows.forEach((arrow, ind) => {
-    arrow.addEventListener("click", function() {
-        let content = document.getElementById(arrow.dataset.content)
-        if (content.classList.contains("hidden")) {
-            arrow.classList.remove("rotate-90")
-            content.classList.remove("hidden")
-        } else {
-            arrow.classList.add("rotate-90")
-            content.classList.add("hidden")
-        }
-    })
-})
-
-const galleryContainer = document.getElementById('galleryContainer');
-const customScrollbar = document.getElementById('customScrollbar');
-const scrollDots = [];
-
-// Create scroll dots based on the number of images
-for (let i = 0; i < galleryContainer.children[0].children.length; i++) {
-    const dot = document.createElement('div');
-    dot.classList.add('scroll-dot');
-    scrollDots.push(dot);
-    customScrollbar.appendChild(dot);
-}
-
-// Update scroll dots based on the scroll position
-galleryContainer.addEventListener('scroll', updateScroll);
-
-function updateScroll() {
-    const scrollPercentage = (galleryContainer.scrollLeft / (galleryContainer.scrollWidth - galleryContainer.clientWidth)) * 100;
-
-    // Update the appearance of the scroll dots
-    scrollDots.forEach((dot, index) => {
-        if (index * (100 / (scrollDots.length - 1)) <= scrollPercentage) {
-            dot.classList.add('active');
-        } else {
-            dot.classList.remove('active');
-        }
-    });
-}
-
-const quoteContainer = document.getElementById('comments');
-const quoteContainer1 = document.getElementById("comments-1")
-
-comments1.forEach((item, index) => {
-    let element = document.createElement("div")
-    element.innerHTML = `
-    <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
-        <div class="flex flex-col justify-between h-full">
-            <div class="flex flex-col">
-                <img src="./imgs/quote.svg" width="50" >
-                <p class="text-secondary font-semibold text-xl md:text-2xl mb-2 uppercase mt-4">${item.title}</p>
-                <img src="./imgs/quote-stars.svg" width="120" >
-                <p class="text-gray-400 mt-6 max-w-[550px]">
-                    ${item.description}
-                </p>
-            </div>
-            
-            <div class="flex">
-                <div class="flex items-center space-x-2 mt-8">
-                    <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
-                        <div class="flex items-center justify-center h-full">
-                            ${item.icon}
-                        </div>
-                    </div>
-                    <span class="font-mont font-semibold text-lg md:text-xl">
-                        ${item.author}
-                    </span>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    `
-    quoteContainer.appendChild(element)
-}) 
-
-comments2.forEach((item, index) => {
-    let element = document.createElement("div")
-    element.innerHTML = `
-    <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
-        <div class="flex flex-col justify-between h-full">
-            <div class="flex flex-col">
-                <img src="./imgs/quote.svg" width="50" >
-                <p class="text-secondary font-semibold text-xl md:text-2xl  mb-2 uppercase mt-4">${item.title}</p>
-                <img src="./imgs/quote-stars.svg" width="120" >
-                <p class="text-gray-400 mt-6 max-w-[550px]">
-                    ${item.description}
-                </p>
-            </div>
-            
-            <div class="flex">
-                <div class="flex items-center space-x-2 mt-8">
-                    <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
-                        <div class="flex items-center justify-center h-full">
-                            ${item.icon}
-                        </div>
-                    </div>
-                    <span class="font-mont font-semibold text-xl">
-                        ${item.author}
-                    </span>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    `
-    quoteContainer1.appendChild(element)
-})
-
-
-let scrollSpeed1 = 1; // Increase/decrease for faster/slower scrolling
-let scrollSpeed2 = 1;
-
-// Function to scroll the container horizontally
-function scrollHorizontally() {
-    quoteContainer.scrollLeft += scrollSpeed1;
-
-    // Reset scroll to 0 when it reaches the end
-    if (quoteContainer.scrollLeft + 2 >= quoteContainer.scrollWidth - quoteContainer.clientWidth) {
-        console.log("hello")
-        scrollSpeed1 = -0.5;
-    } else if (quoteContainer.scrollLeft <= 0) {
-        console.log("hello1")
-        scrollSpeed1 = 1
+function scrollInto(id) {
+    if (!document.getElementById('mobile-menu').classList.contains("hidden")) {
+        toggleMenu()
+    }
+    const componentElement = document.getElementById(id);
+    console.log(id)
+    // Scroll to the target element smoothly
+    if (id === 'comments') {
+        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 200);
+    } else {
+        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 500);
     }
 }
 
-function scrollHorizontally1() {
-    quoteContainer1.scrollLeft += scrollSpeed2;
-
-    // Reset scroll to 0 when it reaches the end
-    if (quoteContainer1.scrollLeft + 2 >= quoteContainer1.scrollWidth - quoteContainer1.clientWidth) {
-        console.log("hello")
-        scrollSpeed2 = -0.5;
-    } else if (quoteContainer1.scrollLeft <= 0) {
-        console.log("hello1")
-        scrollSpeed2 = 1
-    }
+function scrollIntoPage(href) {
+    window.location.href = 'index.html?id='+href  
 }
 
-// Call the scrollHorizontally function at regular intervals
-setInterval(scrollHorizontally, 5);
-setInterval(scrollHorizontally1, 8)
+document.addEventListener("DOMContentLoaded", function() {
+    const arrows1 = document.querySelectorAll('.arrow1')
+    if (arrows1.length > 0) {
+        if (!document.getElementById("c1").classList.contains("hidden")) {
+            arrows1[0].classList.add("rotate-180")
+        }
+    
+        arrows1.forEach((arrow, ind) => {
+            arrow.addEventListener("click", function() {
+                let content = document.getElementById(arrow.dataset.content)
+                if (content.classList.contains("hidden")) {
+                    arrow.classList.add("rotate-180")
+                    content.classList.remove("hidden")
+                } else {
+                    arrow.classList.remove("rotate-180")
+                    content.classList.add("hidden")
+                }
+            })
+        })
+    }
 
 
-// Set the scroll speed (adjust as needed)
-{/* <footer class="mt-20">
-            <div class="border-t border-gray-300 py-10">
-                <div class="container-sm px-10">
-                    <div class="flex flex-wrap items-start justify-between gap-8">
-                        <div class="block text-light dark:text-black">
-                            <img src="./imgs/logo.png" width="140">
-                            <p class="mt-6 mb-3">License information:</p>
-                            <p class="uppercase">
-                                CAL-T MTR0192240 <br> USDOT 3478448 <br> CA571128
+    const arrows = document.querySelectorAll('.arrow')
+    if (arrows.length > 0) {
+        arrows.forEach((arrow, ind) => {
+            arrow.addEventListener("click", function() {
+                let content = document.getElementById(arrow.dataset.content)
+                if (content.classList.contains("hidden")) {
+                    arrow.classList.remove("rotate-90")
+                    content.classList.remove("hidden")
+                } else {
+                    arrow.classList.add("rotate-90")
+                    content.classList.add("hidden")
+                }
+            })
+        })    
+    }
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    function updateFeatures() {
+        const scrollPercentage = (featuresContainer.scrollLeft / (featuresContainer.scrollWidth - featuresContainer.clientWidth)) * 100;
+        // Update the appearance of the scroll dots
+        featuresDots.forEach((dot, index) => {
+            if (index * (100 / (featuresDots.length - 1)) <= scrollPercentage) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    // Features
+    const featuresContainer = document.getElementById("featuresContainer")
+    const featuresScrollbar = document.getElementById("featuresScrollbar")
+    const featuresDots = []
+    if (featuresContainer) {
+        
+        for (let i = 0; i < featuresContainer.children.length; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('scroll-dot');
+            featuresDots.push(dot);
+            featuresScrollbar.appendChild(dot);
+        }
+        
+        // Update scroll dots based on the scroll position
+        featuresContainer.addEventListener('scroll', updateFeatures);
+    }
+    
+    // Gallery
+    const galleryContainer = document.getElementById('galleryContainer');
+    const customScrollbar = document.getElementById('customScrollbar');
+    const scrollDots = [];
+    
+    // Create scroll dots based on the number of images
+    for (let i = 0; i < galleryContainer.children[0].children.length; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('scroll-dot');
+        scrollDots.push(dot);
+        customScrollbar.appendChild(dot);
+    }
+    
+    // Update scroll dots based on the scroll position
+    galleryContainer.addEventListener('scroll', updateScroll);
+    
+    function updateScroll() {
+        const scrollPercentage = (galleryContainer.scrollLeft / (galleryContainer.scrollWidth - galleryContainer.clientWidth)) * 100;
+    
+        // Update the appearance of the scroll dots
+        scrollDots.forEach((dot, index) => {
+            if (index * (100 / (scrollDots.length - 1)) <= scrollPercentage) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+
+})
+
+document.addEventListener("DOMContentLoaded", function() {
+    const quoteContainer = document.getElementById('comments');
+    const quoteContainer1 = document.getElementById("comments-1")
+
+    if (quoteContainer) {
+        comments1.forEach((item, index) => {
+            let element = document.createElement("div")
+            element.innerHTML = `
+                <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
+                    <div class="flex flex-col justify-between h-full">
+                        <div class="flex flex-col">
+                            <img src="./imgs/quote.svg" width="50" >
+                            <p class="text-secondary font-semibold text-xl md:text-2xl mb-2 uppercase mt-4">${item.title}</p>
+                            <img src="./imgs/quote-stars.svg" width="120" >
+                            <p class="text-gray-400 mt-6 max-w-[550px]">
+                                ${item.description}
                             </p>
                         </div>
-                        <div class="hidden md:flex flex-col space-y-3 text-light dark:text-black">
-                            <a class="text-lg">Quick Links</a>
-                            <a class="text-lg">Home</a>
-                            <a class="text-lg">About Us</a>
-                            <a class="text-lg">Gallery</a>
-                            <a class="text-lg">Contact</a>
-                            <a class="text-lg">Testimonials</a>
-                        </div>
-                        <div class="hidden md:flex flex-col space-y-3 text-light dark:text-black">
-                            <a class="text-lg">Our Services</a>
-                            <a class="text-lg">Local moving</a>
-                            <a class="text-lg">Local-distance</a>
-                            <a class="text-lg">Commercial moving</a>
-                            <a class="text-lg">Packing and unpacking</a>
-                            <a class="text-lg">Moving labor</a>
-                            <a class="text-lg">Delivery</a>
-                        </div>
-                        <div class="flex flex-col space-y-4">
-                            <div class="flex items-center space-x-3 text-light dark:text-black text-lg">
-                                <div id="phone-icon" class="bg-white dark:bg-black"></div>
-                                <p>(424) 394-6616</p>
+                        
+                        <div class="flex">
+                            <div class="flex items-center space-x-2 mt-8">
+                                <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
+                                    <div class="flex items-center justify-center h-full">
+                                        ${item.icon}
+                                    </div>
+                                </div>
+                                <span class="font-mont font-semibold text-lg md:text-xl">
+                                    ${item.author}
+                                </span>
                             </div>
-                            <div class="flex items-center space-x-3 text-light dark:text-black text-lg">
-                                <div id="location-icon" class="bg-white dark:bg-black"></div>
-                                <p>909 West Temple Street <br> Los Angeles, CA 90012 USA</p>
-                            </div>
-                            <div class="flex items-center space-x-3 text-light dark:text-black text-lg">
-                                <div id="email-icon" class="bg-white dark:bg-black"></div>
-                                <p>info@prop-mov.com</p>
-                            </div>
-                            <p class="text-light dark:text-black text-lg">Monday - Sunday: 7 AM – 9 PM</p>
                         </div>
-                        <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                        
                     </div>
                 </div>
+                `
+            quoteContainer.appendChild(element)
+        }) 
+    }
+    
+    if (quoteContainer1) {
+        comments2.forEach((item, index) => {
+            let element = document.createElement("div")
+            element.innerHTML = `
+            <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
+                <div class="flex flex-col justify-between h-full">
+                    <div class="flex flex-col">
+                        <img src="./imgs/quote.svg" width="50" >
+                        <p class="text-secondary font-semibold text-xl md:text-2xl  mb-2 uppercase mt-4">${item.title}</p>
+                        <img src="./imgs/quote-stars.svg" width="120" >
+                        <p class="text-gray-400 mt-6 max-w-[550px]">
+                            ${item.description}
+                        </p>
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="flex items-center space-x-2 mt-8">
+                            <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
+                                <div class="flex items-center justify-center h-full">
+                                    ${item.icon}
+                                </div>
+                            </div>
+                            <span class="font-mont font-semibold text-xl">
+                                ${item.author}
+                            </span>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
-        </footer> */}
+            `
+            quoteContainer1.appendChild(element)
+        })
+    }   
+
+    let scrollSpeed1 = 1; // Increase/decrease for faster/slower scrolling
+    let scrollSpeed2 = 1;
+
+    // Function to scroll the container horizontally
+    function scrollHorizontally() {
+        quoteContainer.scrollLeft += scrollSpeed1;
+
+        // Reset scroll to 0 when it reaches the end
+        if (quoteContainer.scrollLeft + 2 >= quoteContainer.scrollWidth - quoteContainer.clientWidth) {
+            scrollSpeed1 = -0.5;
+        } else if (quoteContainer.scrollLeft <= 0) {
+            scrollSpeed1 = 1
+        }
+    }
+
+    function scrollHorizontally1() {
+        quoteContainer1.scrollLeft += scrollSpeed2;
+
+        // Reset scroll to 0 when it reaches the end
+        if (quoteContainer1.scrollLeft + 2 >= quoteContainer1.scrollWidth - quoteContainer1.clientWidth) {
+            scrollSpeed2 = -0.5;
+        } else if (quoteContainer1.scrollLeft <= 0) {
+            scrollSpeed2 = 1
+        }
+    }
+
+    if (quoteContainer) {
+        setInterval(scrollHorizontally, 5);
+        setInterval(scrollHorizontally1, 8)
+    }
+    // Call the scrollHorizontally function at regular intervals
+
+})
+
+function toggleMenu() {
+    var mobileMenu = document.getElementById('mobile-menu');
+    var body = document.body
+
+    if(mobileMenu.classList.contains("hidden")) {
+        mobileMenu.classList.remove("hidden")
+        body.classList.add("overflow-hidden")
+    } else {
+        mobileMenu.classList.add("hidden")
+        body.classList.remove("overflow-hidden")
+    }
+}
+

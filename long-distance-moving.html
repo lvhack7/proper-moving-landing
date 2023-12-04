@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Proper Moving</title>
+    <title>Long-Distance Moving</title>
     <link rel="icon" type="image/x-icon" href="/imgs/home-deliver.png">
     <link rel="stylesheet" href="./style.css" >
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,10 +23,7 @@
         }
       </script>
 </head>
-<body class="relative bg-dark dark:bg-[#F8F2F2]">
-    <div class="absolute top-0 right-0">
-        <div class="blurred-primary-spot"></div>
-    </div>
+<body class="bg-dark dark:bg-[#F8F2F2]">
     <header class="bg-dark">
         <div class="container-sm">
             <nav class="flex items-center border-b border-[#F8EFEF73] justify-between w-full py-4">
@@ -41,19 +38,19 @@
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/our-company.html">About Us</a>
                         </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
-                            <a onclick="scrollIntoPage('services')">Services</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('services')">
+                            Services
                         </li>
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/moving-tips.html">Moving Tips and FAQs</a>
                         </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" >
-                            <a onclick="scrollInto('comments')">Testimonials</a>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
+                            Testimonials
+                        </li>
+                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
+                            Gallery
                         </li>
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium" >
-                            <a onclick="scrollIntoPage('gallery')">Gallery</a>
-                        </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
                             <a href="/contact.html">Contact</a>
                         </li>
                     </ul>
@@ -67,53 +64,70 @@
                 </div>
             </nav>
         </div>
+        <section class="container-sm py-10">
+            <!-- <div class="absolute top-2 right-12">
+                <img class="rounded-3xl" src="./imgs/bg-local-moving.png" >
+            </div> -->
+            <div class="relative bg-commercial-moving py-10 md:py-20">
+                <div class="flex flex-col space-y-10">
+                    <p class="font-mont z-10 text-4xl md:text-5xl font-bold text-light uppercase">Long-distance<br> moving</p>
+                    <p class="text-light z-10 max-w-[500px]">
+                        Long-distance moving services are provided by professional moving companies to help individuals and businesses relocate their belongings over significant distances. These moves typically involve transporting items between cities, states. Long-distance moves can be complex and challenging, so hiring a reputable moving service can make the process smoother and less stressful
+                    </p>
+                </div>
+                <div class="hidden md:block absolute -bottom-6 right-[20%]">
+                    <a onclick="scrollInto('key-services')" class="flex items-center justify-center bg-secondary w-28 h-28 rounded-full p-8 hover:cursor-pointer">
+                        <img src="./imgs/Arrow 6.svg" >
+                    </a>
+                </div>
+            </div>
+        </section>
     </header>
     <main class="bg-dark dark:bg-[#F8F2F2]">
-        <section class="px-2 md:px-12 py-16">
+        <section class="px-2 md:px-12 py-10">
 
-            <section class="relative card w-full">
+            <section id="key-services" class="card w-full">
                 <div class="absolute top-0 left-0">
                     <div class="blurred-primary-spot"></div>
                 </div>
                 <div class="container-sm px-10 py-8 text-light">
-                    <p class="font-light text-sm mb-8">About Us</p>
-                    <p class="font-mont font-bold text-5xl uppercase mb-4">Why choose us.</p>
-                    <p class="max-w-[500px]">Because Proper Moving will make it easier for you to move to a new life with the features we have</p>
+                    <p class="font-light text-sm mb-8">Service</p>
+                    <p class="font-mont font-bold text-4xl uppercase mb-4">Key features</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pr-4">
-                        <div class="bg-primary rounded-2xl px-4 pt-4 pb-8">
-                            <div class="flex gap-4">
-                                <div class="font-mont  text-6xl text-secondary font-bold">01</div>
-                                <div class="block">
-                                    <p class="text-xl text-secondary uppercase mb-4 font-semibold mt-3">Licensed, Bonded, and Insured</p>
-                                    <p class="text-gray-600">Our company meet all the rules and regulations. We have a trained and professional staff. We provide free basic insurance</p>
+                        <div class="bg-primary rounded-[30px] px-6 pt-4 pb-8">
+                            <div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="font-mont text-5xl text-secondary font-bold">01</div>
+                                    <p class="text-lg lg:text-xl text-secondary uppercase mb-4 font-medium mt-3">Professional Moving Team</p>
                                 </div>
+                                <p class="text-gray-600 mt-6">Our experienced and highly trained moving professionals are equipped to handle all aspects of your move, from packing and loading to transportation and unloading</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
-                            <div class="flex gap-4">
-                                <div class="font-mont text-6xl text-light font-bold">02</div>
-                                <div class="block">
-                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Transparency</p>
-                                    <p class="text-gray-300">We do not have any hidden fees. Being transparent about the fees is an important practice for us to build trust with our customers. If you have any specific questions feel free to email, call or text us!</p>
+                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                            <div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="font-mont text-5xl text-light font-bold">02</div>
+                                    <p class="text-lg lg:text-xl text-light uppercase font-medium mb-4 mt-3">Customized Solutions</p>
                                 </div>
+                                <p class="text-gray-300 mt-6">We understand that each move is unique, and we offer tailored solutions to meet your specific needs and preferences</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
-                            <div class="flex gap-4">
-                                <div class="font-mont text-6xl text-light font-bold">03</div>
-                                <div class="block">
-                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Full Service</p>
-                                    <p class="text-gray-300">We have experience in handling all aspects of the move, from packing to unpacking, and can complete the tasks quickly and efficiently</p>
+                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                            <div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="font-mont text-5xl text-light font-bold">03</div>
+                                    <p class="text-lg lg:text-xl text-light uppercase font-medium mb-4 mt-3">Competitive pricing</p>
                                 </div>
+                                <p class="text-gray-300 mt-6">We offer transparent and competitive pricing for our services, with no hidden fees or surprises. Our goal is to provide a cost-effective solution while maintaining the highest standards of quality</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-2xl px-4 pt-4 pb-8">
-                            <div class="flex gap-4">
-                                <div class="font-mont text-6xl text-light font-bold">04</div>
-                                <div class="block">
-                                    <p class="text-xl text-light uppercase font-semibold mb-4 mt-3">Affordable price</p>
-                                    <p class="text-gray-300">The mission of Proper Moving Company is to provide proper, best, efficient, and cheap moving services for an affordable move</p>
+                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                            <div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="font-mont text-5xl text-light font-bold">04</div>
+                                    <p class="text-lg lg:text-xl text-light uppercase font-medium mb-4 mt-3">Customer support</p>
                                 </div>
+                                <p class="text-gray-300 mt-6">Our dedicated customer support team is available to answer your questions, provide assistance, and address any concerns throughout the moving process</p>
                             </div>
                         </div>
                         
@@ -122,16 +136,84 @@
                 
             </section>
 
-            <section class="relative card w-full mt-20">
+            <section class="container-sm py-20">
+                <p class="text-light font-bold text-4xl uppercase font-mont dark:text-dark mb-10">Our most frequent routes.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="order-2 md:order-1 flex flex-col space-y-4 h-full">
+                        <p class="text-light dark:text-dark">Our most frequent routes include Los Angeles to San Francisco, Los Angeles to San Diego, Los Angeles to Phoenix, Los Angeles to Las Vegas, Los Angeles to Sacramento, Los Angeles to San Jose, Irvine to San Francisco, Irvine to San Diego, Irvine to Arizona, Irvine to Phoenix, Irvine to Sacramento, Irvine to San Jose and other</p>
+                        <img class="rounded-[20px]" src="./imgs/workers_in_truck.png" >
+                    </div>
+                    <div class="order-1 md:order-2 flex items-center justify-center">
+                        <img class="w-[200px] md:w-[300px]" src="./imgs/frequent-routes.png" >
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="container-sm py-20">
+                <div class="flex flex-col space-y-4">
+                    <p class="font-mont text-light text-5xl font-bold uppercase dark:text-black">Our projects</p>
+                    <div class="grid md:grid-cols-3 grid-cols-1 grid-rows-1 gap-4">
+                        <div class="md:col-span-2">
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="flex flex-col justify-between space-y-4">
+                                    <div class="border border-primary flex items-center justify-center px-6 py-12 rounded-[20px]">
+                                        <p class="text-xl text-light dark:text-black">
+                                            ProPer is an independent and operated company with a huge experience in the moving 
+                                        </p>
+                                    </div>
+                                    
+                                    <div>
+                                        <div class="relative h-full w-full">
+                                            <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                                <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
+                                            </div>
+                                            <img src="./imgs/projects/confident-handsome-guy-posing-against-white-wall.png" class="h-full w-full rounded-[20px]">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="col-span-1">
+                                    <div class="relative h-full w-full">
+                                        <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                            <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
+                                        </div>
+                                        <img src="./imgs/projects/medium-shot-woman-work-portrait.png" class="rounded-[20px] h-full w-full">
+                                    </div>
+                                </div>
+                            </div>        
+                        </div>
+                        <div class="col-span-1">
+                            <div class="flex flex-col h-full gap-4">
+                                <div class="relative h-[50%]">
+                                    <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                        <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
+                                    </div>
+                                    <img src="./imgs/projects/young-businessman-crossing-arms-white-background 1.png" class="h-full w-full rounded-[20px]">
+                                </div>
+                                <div class="relative h-[50%]">
+                                    <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
+                                        <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
+                                    </div>
+                                    <img src="./imgs/projects/medium-shot-woman-work-portrait-1.png" class="h-full w-full rounded-[20px]">
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="relative card w-full lg:mt-20">
                 <div class="absolute bottom-0 left-0">
                     <div class="blurred-primary-spot"></div>
                 </div>
-                <div class="absolute top-1 right-1 -z-10">
-                    <img class="w-[150px] md:w-[250px]" src="./imgs/home-deliver.png">
+                <div class="absolute top-1 right-0">
+                    <img class="w-[200px] md:w-[300px]" src="./imgs/Black.png">
                 </div>
                 <div class="container-sm px-10 py-8 text-light">
                     <p class="font-light text-sm mb-8">About Us</p>
-                    <p class="font-mont font-bold text-4xl md:text-5xl uppercase mb-4">
+                    <p class="font-mont font-bold text-4xl lg:text-5xl uppercase mb-4">
                         <span class="text-primary">Proper moving</span> is one of <br> the best moving companies.
                     </p>
                     <p class="max-w-[600px] mb-10">Making ProPer Moving as one of the best companies in moving services by optimally serving the needs and interests of customers so that they are known in Los Angeles and other areas</p>
@@ -186,55 +268,6 @@
                 
             </section>
 
-            <section class="container-sm py-10">
-                <div class="flex flex-col space-y-4">
-                    <p class="font-mont text-light text-5xl font-bold uppercase dark:text-black">Our projects</p>
-                    <div class="grid grid-cols-3 grid-rows-1 gap-4">
-                        <div class="col-span-2 row-span-1">
-                            <div class="flex flex-col h-full">
-                                <div class="border-2 border-primary px-6 py-8 rounded-[20px]">
-                                    <p class="text-sm text-light dark:text-black">
-                                        We know that usually moving causes people to be stressed-out and nervous. Our aim is to eliminate this. Whether it is just one box or a huge house, we will meet your needs and treat you as a valued customer. We always want to exceed your expectations. If you are looking for proper and efficient moving services just call us, and 100 % satisfaction is guaranteed
-                                    </p>
-                                </div>
-                                <div class="grid grid-cols-2 gap-4 mt-4">
-                                    <div class="relative">
-                                        <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
-                                            <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
-                                        </div>
-                                        <img src="./imgs/projects/confident-handsome-guy-posing-against-white-wall.png" class="h-full rounded-[20px]">
-                                    </div>
-                                    <div class="relative">
-                                        <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
-                                            <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
-                                        </div>
-                                        <img src="./imgs/projects/medium-shot-woman-work-portrait.png" class="rounded-[20px] h-full">
-                                    </div>
-                                    
-                                </div>
-                            </div>        
-                        </div>
-                        <div class="col-span-1 row-span-1">
-                            <div class="flex flex-col h-full gap-4">
-                                <div class="relative h-[50%]">
-                                    <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
-                                        <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
-                                    </div>
-                                    <img src="./imgs/projects/young-businessman-crossing-arms-white-background 1.png" class="h-full rounded-[20px]">
-                                </div>
-                                <div class="relative h-[50%]">
-                                    <div class="absolute bottom-0 left-0 w-full p-6 rounded-[20px]" style="background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #0E50C5 100%);">
-                                        <p class="text-white font-bold text-xl uppercase font-mont">Name of the project</p>
-                                    </div>
-                                    <img src="./imgs/projects/medium-shot-woman-work-portrait-1.png" class="h-full rounded-[20px]">
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section class="bg-primary rounded-[60px]">
                 <div class="container-sm py-10 px-10">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
@@ -250,10 +283,11 @@
                     </div>
                 </div>
             </section>
+            
         </section>
 
-        <section class="py-8 md:py-10">
-            <div class="container-sm px-10 mb-8">
+        <section class="py-10">
+            <div class="container-sm px-10 mb-10">
                 <p class="text-light font-bold text-4xl md:text-5xl uppercase dark:text-black">GALLERY</p>
             </div>
             <div class="w-full">
@@ -273,7 +307,7 @@
                         <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-12.png" width="565">
                     </div>
                 </div>
-                <div class="flex items-center justify-center mt-4 md:mt-8">
+                <div class="flex items-center justify-center mt-8">
                     <div id="customScrollbar" class="flex items-center space-x-3">
                         
                     </div>
@@ -283,7 +317,7 @@
 
         <section class="block pt-10">
             <div class="container-sm px-10 mb-10">
-                <p class="text-light font-bold text-4xl md:text-5xl uppercase max-w-[700px] dark:text-black">
+                <p class="text-light font-bold text-5xl uppercase max-w-[700px] dark:text-black">
                     don't just take our word for it. see what our happy clients have to say:
                 </p>
             </div>
@@ -376,7 +410,7 @@
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
                     Gallery
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('services')">
                     <a href="/contact.html">Contact</a>
                 </li>
             </ul>
