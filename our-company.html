@@ -6,6 +6,8 @@
     <title>Our Company</title>
     <link rel="icon" type="image/x-icon" href="/imgs/home-deliver.png">
     <link rel="stylesheet" href="./style.css" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -56,7 +58,7 @@
                     </ul>
                 </div>
                 <div class="hidden xl:flex items-center space-x-4">
-                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</button>
+                    <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>
                     <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
                 </div>
                 <div class="xl:hidden flex hover:cursor-pointer hover:scale-105" onclick="toggleMenu()">
@@ -69,9 +71,11 @@
                         <p class="text-4xl md:text-5xl font-bold text-light uppercase max-w-[650px]">Moving company with professional and experienced team.</p>
                         <div class="block mt-8">
                             <p class="text-light text-lg mb-4 max-w-[300px]">The fastest and easiest way to contact us for booking</p>
-                            <button class="z-10 flex items-center bg-primary text-secondary text-md px-10 py-4 rounded-full font-semibold">
-                                CONTACT US <img class="ml-2" src="./imgs/arrow-right-primary.svg" width="15" >
-                            </button>
+                            <div class="flex justify-start">
+                                <a href="https://app.supermove.co/0/propermoving/request" class="flex items-center bg-primary text-secondary text-md px-10 py-4 rounded-full space-x-2 font-semibold hover:space-x-4 hover:scale-105">
+                                    <span>CONTACT US</span> <img src="./imgs/arrow-right-primary.svg" width="15" >
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="hidden md:block absolute -bottom-8 right-[20%]">
@@ -85,58 +89,65 @@
         </div>
     </header>
     <main class="bg-dark dark:bg-[#F8F2F2]">
-        <section class="px-2 md:px-12 py-16">
+        <section class="px-6 md:px-12 py-16">
 
             <section class="container-sm md:py-20">
-                <div class="flex flex-col md:flex-row gap-4 md:items-center lg:gap-0 lg:space-x-8 mb-8">
-                    <p class="font-mont shrink-0 text-3xl md:text-5xl font-bold text-light uppercase dark:text-dark">About us.</p>
-                    <div class="bg-light h-[2px] w-[200px] dark:bg-dark"></div>
-                    <p class="text-light max-w-[600px] dark:text-dark">The Proper Moving Company is Licensed and Insured Company. The Proper Moving Company was established in 2012</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 items-center gap-8 mb-10">
+                    <div class="col-span-2 md:col-span-1">
+                        <p class="font-mont text-4xl font-bold text-light uppercase dark:text-dark">About us.</p>
+                    </div>
+                    <div class="hidden md:block col-span-1 px-4">
+                        <div class="bg-light h-[2px] w-full dark:bg-dark"></div>
+                    </div>
+                    <div class="col-span-2">
+                        <p class="text-light max-w-[600px] dark:text-dark">The Proper Moving Company is Licensed and Insured Company. The Proper Moving Company was established in 2012</p>
+                    </div>
+
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="flex">
                         <img src="./imgs/truck-deliver.png">
                     </div>
-                    <div class="flex flex-col space-y-3 h-full">
-                        <div class="block card rounded-[30px] shadow px-6 py-8">
+                    <div class="flex flex-col space-y-5 h-full">
+                        <div class="faq block card rounded-[30px] shadow px-6 py-8">
                             <div class="flex items-center justify-between w-full">
                                 <div class="flex items-center space-x-4">
-                                    <p class="text-primary font-bold text-5xl font-mont">10</p>
+                                    <p class="text-primary font-bold text-6xl font-mont">10</p>
                                     <p class="text-light text-xl font-semibold uppercase font-mont">Years of <br>experience</p>
                                 </div>
                                 <div data-content="c1" class="arrow1 bg-[#505050] flex items-center justify-center w-10 h-10 p-3 rounded-full shadow-sm hover:cursor-pointer hover:scale-105">
                                     <img src="./imgs/arrow-down-white.svg" >
                                 </div>
                             </div>
-                            <p id="c1" class="text-light font-light text-sm mt-6">
+                            <p id="c1" class="content text-light font-light mt-6 text-lg">
                                 The owner has more than 10 years moving experience. He started as a helper and then worked as a foreman - driver, dispatch, operations manager, and general manager which gave him valuable skills. All our crews have at least 2-3 years of moving experience.
                             </p>
                         </div>
-                        <div class="card rounded-[30px] shadow px-6 py-8">
+                        <div class="faq card rounded-[30px] shadow px-6 py-8">
                             <div class="flex items-center justify-between w-full">
                                 <div class="flex items-center space-x-4">
-                                    <p class="text-primary font-bold text-5xl font-mont">5+</p>
+                                    <p class="text-primary font-bold text-6xl font-mont">5+</p>
                                     <p class="text-light text-xl font-semibold uppercase font-mont">types of <br>services</p>
                                 </div>
                                 <div data-content="c2" class="arrow1 bg-[#505050] flex items-center justify-center w-10 h-10 p-3 rounded-full shadow-sm hover:cursor-pointer hover:scale-105">
                                     <img src="./imgs/arrow-down-white.svg" >
                                 </div>
                             </div>
-                            <p id="c2" class="hidden text-light font-light text-sm mt-6">
+                            <p id="c2" class="content hidden text-light font-light text-lg  mt-6">
                                 The owner has more than 10 years moving experience. He started as a helper and then worked as a foreman - driver, dispatch, operations manager, and general manager which gave him valuable skills. All our crews have at least 2-3 years of moving experience.
                             </p>
                         </div>
-                        <div class="card rounded-[30px] shadow px-6 py-8">
+                        <div class="faq card rounded-[30px] shadow px-6 py-8">
                             <div class="flex items-center justify-between w-full">
                                 <div class="flex items-center space-x-4">
-                                    <p class="text-primary font-bold text-5xl font-mont">9+</p>
+                                    <p class="text-primary font-bold text-6xl font-mont">9+</p>
                                     <p class="text-light text-xl font-semibold uppercase font-mont">types of <br>moving</p>
                                 </div>
                                 <div data-content="c3" class="arrow1 bg-[#505050] flex items-center justify-center w-10 h-10 p-3 rounded-full shadow-sm hover:cursor-pointer hover:scale-105">
                                     <img src="./imgs/arrow-down-white.svg" >
                                 </div>
                             </div>
-                            <p id="c3" class="hidden text-light font-light text-sm mt-4">
+                            <p id="c3" class="content hidden text-light font-light text-lg mt-4">
                                 The owner has more than 10 years moving experience. He started as a helper and then worked as a foreman - driver, dispatch, operations manager, and general manager which gave him valuable skills. All our crews have at least 2-3 years of moving experience.
                             </p>
                         </div>
@@ -151,52 +162,46 @@
                 <div class="absolute top-1 right-1 -z-10">
                     <img class="w-[150px] md:w-[250px]" src="./imgs/home-deliver.png">
                 </div>
-                <div class="container-sm px-10 py-8 text-light">
+                <div class="container-sm px-6 py-8 text-light">
                     <p class="font-light text-sm mb-8">About Us</p>
                     <p class="font-mont font-bold text-4xl md:text-5xl uppercase mb-4">
                         <span class="text-primary">Proper moving</span> is one of <br> the best moving companies.
                     </p>
                     <p class="max-w-[600px] mb-10">Making ProPer Moving as one of the best companies in moving services by optimally serving the needs and interests of customers so that they are known in Los Angeles and other areas</p>
-                    <div class="flex flex-wrap gap-10 items-start">
+                    <div class="flex flex-wrap gap-16 items-start">
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">5</span>
+                                <span class="font-mont text-primary font-bold text-5xl">5</span>
                                 <img src="./imgs/five-stars.png" width="150">
                             </div>
-                            <p class="text-gray-300">Star rated <br>Yelp and Google</p>
+                            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Star rated <br>Yelp and Google</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">10+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">10+</span>
                             </div>
-                            <p class="text-gray-300">Years experience</p>
+                            <p data-aos="fade-right" data-aos-delay="500" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Years experience</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">3M+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">3M+</span>
                             </div>
-                            <p class="text-gray-300">Happy clients</p>
+                            <p data-aos="fade-right" data-aos-delay="700" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Happy clients</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">15+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">15+</span>
                                 
                             </div>
-                            <p class="text-gray-300">Reputable realtor <br> work with</p>
+                            <p data-aos="fade-right" data-aos-delay="900" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Reputable realtor <br> work with</p>
                         </div>
+                        
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">25</span>
+                                <span class="font-mont text-primary font-bold text-5xl">700</span>
                                 
                             </div>
-                            <p class="text-gray-300">Schools</p>
-                        </div>
-                        <div class="flex flex-col space-y-4">
-                            <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">700</span>
-                                
-                            </div>
-                            <p class="text-gray-300 max-w-[200px]">Regular customers who can always rely on our loyalty</p>
+                            <p data-aos="fade-right" data-aos-delay="1200" data-aos-duration="700" data-aos-once="true" class="text-gray-300 max-w-[200px]">Regular customers who can always rely on our loyalty</p>
                         </div>
                     </div>
                     <div class="rounded-lg bg-two-collegues py-44 mt-8">
@@ -216,7 +221,9 @@
                         </div>
                         <div class="flex flex-col justify-between">
                             <div class="flex flex-col items-center -mt-4">
-                                <img class="w-[150px] md:w-[200px]" src="./imgs/arrow-primary-form.svg" >
+                                <a href="https://app.supermove.co/0/propermoving/request">
+                                    <img class="w-[150px] md:w-[200px]" src="./imgs/arrow-primary-form.svg" >
+                                </a> 
                                 <div class="max-w-[300px] text-lg font-medium mt-10">The fastest and easiest way to contact us for booking</div>
                             </div>
                         </div>
@@ -225,14 +232,17 @@
             </section>
         </section>
 
-        <section id="gallery" class="py-10">
-            <div class="container-sm px-10 mb-10">
-                <p class="text-light font-bold text-5xl uppercase dark:text-black">GALLERY</p>
+        <section id="gallery" class="relative py-8 md:py-10">
+            <div class="absolute bottom-[50%] right-0">
+                <div class="blurred-primary-spot"></div>
+            </div>
+            <div class="container-sm px-10 mb-8">
+                <p class="text-light font-bold text-4xl md:text-5xl uppercase dark:text-black">GALLERY</p>
             </div>
             <div class="w-full">
                 <div class="overflow-x-auto no-scrollbar" id="galleryContainer">
-                    <div class="flex gap-4">
-                        <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-1.png" width="300">
+                    <div class="flex gap-4 px-4">
+                        <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-1.png" width="320">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-2.png" width="550">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-3.png" width="550">
                         <img class="rounded-3xl" src="./imgs/gallery/gallery-4.png" width="305">
@@ -246,7 +256,7 @@
                         <img class="rounded-3xl" style="filter: brightness(45%);" src="./imgs/gallery/gallery-12.png" width="565">
                     </div>
                 </div>
-                <div class="flex items-center justify-center mt-8">
+                <div class="flex items-center justify-center mt-4 md:mt-8">
                     <div id="customScrollbar" class="flex items-center space-x-3">
                         
                     </div>
@@ -255,17 +265,27 @@
         </section>
 
         <section class="block pt-10">
-            <div class="container-sm px-10 mb-10">
-                <p class="text-light font-bold text-5xl uppercase max-w-[700px] dark:text-black">
+            <div class="relative container-sm px-10 mb-10">
+                <p class="text-light font-bold text-4xl md:text-5xl uppercase max-w-[700px] dark:text-black">
                     don't just take our word for it. see what our happy clients have to say:
                 </p>
+                <div class="absolute top-0 right-0">
+                    <div class="blurred-primary-spot"></div>
+                </div>
             </div>
+            
             <div id="comments" class="comments flex gap-4 w-full overflow-x-auto">
                     
             </div>
         </section>
 
-        <section class="mt-2">
+        <section class="relative mt-2">
+            <div class="hidden md:block absolute bottom-8 left-0">
+                <div class="blurred-comments"></div>
+            </div>
+            <div class="hidden md:block absolute bottom-8 right-0">
+                <div class="blurred-comments"></div>
+            </div>
             <div id="comments-1" class="comments flex gap-4 w-full overflow-x-auto">
                 
             </div>
@@ -315,7 +335,7 @@
                         </div>
                         <p class="text-light">Monday - Sunday: 7 AM – 9 PM</p>
                     </div>
-                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                    <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</a>
                 </div>
             </div>
         </div>
@@ -354,7 +374,9 @@
                 </li>
             </ul>
             
-            <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold mt-4 hover:scale-105">GET A QUOTE</button>          
+            <div class="flex justify-start mt-6">
+                <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>          
+            </div>
         </div>
     </div>
 

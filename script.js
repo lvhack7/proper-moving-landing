@@ -1,3 +1,5 @@
+AOS.init()
+
 const comments1 = [
     {
         title: "The moving team did an excellent job",
@@ -150,41 +152,66 @@ function scrollIntoPage(href) {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const arrows1 = document.querySelectorAll('.arrow1')
-    if (arrows1.length > 0) {
-        if (!document.getElementById("c1").classList.contains("hidden")) {
-            arrows1[0].classList.add("rotate-180")
-        }
-    
-        arrows1.forEach((arrow, ind) => {
+    const faqItems = document.querySelectorAll('.faq')
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const arrow = item.querySelector('.arrow1');
+            const content = item.querySelector('.content');
+
             arrow.addEventListener("click", function() {
-                let content = document.getElementById(arrow.dataset.content)
                 if (content.classList.contains("hidden")) {
+                    closeAllFAQ();
                     arrow.classList.add("rotate-180")
                     content.classList.remove("hidden")
                 } else {
                     arrow.classList.remove("rotate-180")
                     content.classList.add("hidden")
                 }
-            })
+                
+            });
         })
     }
 
+    function closeAllFAQ() {
+        faqItems.forEach((item) => {
+            const arrow = item.querySelector('.arrow1');
+            const content = item.querySelector('.content');
+            arrow.classList.remove("rotate-180")
+            content.classList.add("hidden")
+        });
+    }
 
-    const arrows = document.querySelectorAll('.arrow')
-    if (arrows.length > 0) {
-        arrows.forEach((arrow, ind) => {
+    const accordionItems = document.querySelectorAll('.service');
+    
+    if (accordionItems.length > 0) {
+
+        accordionItems.forEach((item) => {
+            const arrow = item.querySelector('.arrow');
+            const content = item.querySelector('.content');
+
             arrow.addEventListener("click", function() {
-                let content = document.getElementById(arrow.dataset.content)
                 if (content.classList.contains("hidden")) {
-                    arrow.classList.remove("rotate-90")
-                    content.classList.remove("hidden")
+                    closeAllItems();
+                    arrow.classList.remove("rotate-90");
+                    content.classList.remove("hidden");
+                    content.classList.add("expanded")
                 } else {
-                    arrow.classList.add("rotate-90")
-                    content.classList.add("hidden")
+                    arrow.classList.add("rotate-90");
+                    content.classList.add("hidden");
                 }
-            })
-        })    
+                
+            });
+        });
+    }
+
+    function closeAllItems() {
+        accordionItems.forEach((item) => {
+            const arrow = item.querySelector('.arrow');
+            const content = item.querySelector('.content');
+            arrow.classList.add("rotate-90");
+            item.classList.remove("open");
+            content.classList.add("hidden");
+        });
     }
 })
 
@@ -256,13 +283,13 @@ document.addEventListener("DOMContentLoaded", function() {
         comments1.forEach((item, index) => {
             let element = document.createElement("div")
             element.innerHTML = `
-                <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
+                <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-8 md:py-4 min-w-[400px] md:min-w-[500px]">
                     <div class="flex flex-col justify-between h-full">
                         <div class="flex flex-col">
                             <img src="./imgs/quote.svg" width="50" >
-                            <p class="text-secondary font-semibold text-xl md:text-2xl mb-2 uppercase mt-4">${item.title}</p>
+                            <p class="text-secondary font-semibold text-xl md:text-xl mb-2 uppercase mt-4">${item.title}</p>
                             <img src="./imgs/quote-stars.svg" width="120" >
-                            <p class="text-gray-400 mt-6 max-w-[550px]">
+                            <p class="text-gray-400 text-sm mt-6 max-w-[550px]">
                                 ${item.description}
                             </p>
                         </div>
@@ -274,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                         ${item.icon}
                                     </div>
                                 </div>
-                                <span class="font-mont font-semibold text-lg md:text-xl">
+                                <span class="font-mont font-semibold">
                                     ${item.author}
                                 </span>
                             </div>
@@ -291,39 +318,39 @@ document.addEventListener("DOMContentLoaded", function() {
         comments2.forEach((item, index) => {
             let element = document.createElement("div")
             element.innerHTML = `
-            <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-10 md:py-6 min-w-[500px] md:min-w-[600px]">
-                <div class="flex flex-col justify-between h-full">
-                    <div class="flex flex-col">
-                        <img src="./imgs/quote.svg" width="50" >
-                        <p class="text-secondary font-semibold text-xl md:text-2xl  mb-2 uppercase mt-4">${item.title}</p>
-                        <img src="./imgs/quote-stars.svg" width="120" >
-                        <p class="text-gray-400 mt-6 max-w-[550px]">
-                            ${item.description}
-                        </p>
-                    </div>
-                    
-                    <div class="flex">
-                        <div class="flex items-center space-x-2 mt-8">
-                            <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
-                                <div class="flex items-center justify-center h-full">
-                                    ${item.icon}
-                                </div>
-                            </div>
-                            <span class="font-mont font-semibold text-xl">
-                                ${item.author}
-                            </span>
+            <div class="bg-white rounded-3xl h-full px-6 py-3 md:px-8 md:py-4 min-w-[400px] md:min-w-[500px]">
+                    <div class="flex flex-col justify-between h-full">
+                        <div class="flex flex-col">
+                            <img src="./imgs/quote.svg" width="50" >
+                            <p class="text-secondary font-semibold text-xl md:text-xl mb-2 uppercase mt-4">${item.title}</p>
+                            <img src="./imgs/quote-stars.svg" width="120" >
+                            <p class="text-gray-400 text-sm mt-6 max-w-[550px]">
+                                ${item.description}
+                            </p>
                         </div>
+                        
+                        <div class="flex">
+                            <div class="flex items-center space-x-2 mt-8">
+                                <div class="bg-primary text-white shadow font-medium rounded-full w-12 h-12 text-xl">
+                                    <div class="flex items-center justify-center h-full">
+                                        ${item.icon}
+                                    </div>
+                                </div>
+                                <span class="font-mont font-semibold">
+                                    ${item.author}
+                                </span>
+                            </div>
+                        </div>
+                        
                     </div>
-                    
                 </div>
-            </div>
             `
             quoteContainer1.appendChild(element)
         })
     }   
 
-    let scrollSpeed1 = 1; // Increase/decrease for faster/slower scrolling
-    let scrollSpeed2 = 1;
+    let scrollSpeed1 = 0.5; // Increase/decrease for faster/slower scrolling
+    let scrollSpeed2 = 0.5;
 
     // Function to scroll the container horizontally
     function scrollHorizontally() {

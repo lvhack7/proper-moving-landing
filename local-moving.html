@@ -6,6 +6,8 @@
     <title>Local Moving</title>
     <link rel="icon" type="image/x-icon" href="/imgs/home-deliver.png">
     <link rel="stylesheet" href="./style.css" >
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -56,7 +58,7 @@
                     </ul>
                 </div>
                 <div class="hidden xl:flex items-center space-x-4">
-                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</button>
+                    <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>
                     <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
                 </div>
                 <div class="xl:hidden flex hover:cursor-pointer hover:scale-105" onclick="toggleMenu()">
@@ -90,38 +92,38 @@
                     <p class="font-light text-sm mb-8">Service</p>
                     <p class="font-mont font-bold text-4xl uppercase mb-4">Key features</p>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pr-4">
-                        <div class="bg-primary rounded-[30px] px-6 pt-4 pb-8">
+                        <div data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="bg-primary rounded-[30px] px-8 pt-4 pb-8">
                             <div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="font-mont text-5xl text-secondary font-bold">01</div>
-                                    <p class="text-xl md:text-2xl text-secondary uppercase mb-4 font-medium mt-3">Professional Moving Team</p>
+                                    <div class="font-mont text-7xl text-secondary font-bold">01</div>
+                                    <p class="text-lg md:text-2xl text-secondary uppercase mb-4 font-medium mt-3">Professional Moving Team</p>
                                 </div>
-                                <p class="text-gray-600 mt-6">Our experienced and highly trained moving professionals are equipped to handle all aspects of your move, from packing and loading to transportation and unloading</p>
+                                <p class="text-gray-600 text-lg font-light leading-relaxed px-2 mt-6 max-w-[550px]">Our experienced and highly trained moving professionals are equipped to handle all aspects of your move, from packing and loading to transportation and unloading</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                        <div data-aos="fade-right" data-aos-delay="500" data-aos-duration="600" data-aos-once="true" class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
                             <div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="font-mont text-5xl text-light font-bold">02</div>
-                                    <p class="text-xl md:text-2xl text-light uppercase font-medium mb-4 mt-3">Transparency</p>
+                                    <div class="font-mont text-6xl text-light font-bold">02</div>
+                                    <p class="text-lg md:text-xl text-light uppercase font-medium mb-4 mt-3">Transparency</p>
                                 </div>
                                 <p class="text-gray-300 mt-6">We do not have any hidden fees. Being transparent about the fees is an important practice for us to build trust with our customers. If you have any specific questions feel free to email, call or text us!</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                        <div data-aos="fade-right" data-aos-delay="700" data-aos-duration="600" data-aos-once="true" class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
                             <div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="font-mont text-5xl text-light font-bold">03</div>
-                                    <p class="text-xl md:text-2xl text-light uppercase font-medium mb-4 mt-3">Competitive pricing</p>
+                                    <div class="font-mont text-6xl text-light font-bold">03</div>
+                                    <p class="text-lg md:text-xl text-light uppercase font-medium mb-4 mt-3">Competitive pricing</p>
                                 </div>
                                 <p class="text-gray-300 mt-6">We offer transparent and competitive pricing for our services, with no hidden fees or surprises. Our goal is to provide a cost-effective solution while maintaining the highest standards of quality</p>
                             </div>
                         </div>
-                        <div class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
+                        <div data-aos="fade-right" data-aos-delay="900" data-aos-duration="600" data-aos-once="true" class="bg-[#606060CC] rounded-[30px] px-6 pt-4 pb-8">
                             <div>
                                 <div class="flex items-center space-x-4">
-                                    <div class="font-mont text-5xl text-light font-bold">04</div>
-                                    <p class="text-xl md:text-2xl text-light uppercase font-medium mb-4 mt-3">Customer support</p>
+                                    <div class="font-mont text-6xl text-light font-bold">04</div>
+                                    <p class="text-lg md:text-xl text-light uppercase font-medium mb-4 mt-3">Customer support</p>
                                 </div>
                                 <p class="text-gray-300 mt-6">Our dedicated customer support team is available to answer your questions, provide assistance, and address any concerns throughout the moving process</p>
                             </div>
@@ -132,7 +134,10 @@
                 
             </section>
 
-            <section class="container-sm py-16 lg:px-10">
+            <section class="relative container-sm py-16 lg:px-10">
+                <div class="absolute top-0 right-0">
+                    <div class="blurred-primary-spot"></div>
+                </div>
                 <p class="font-mont text-light font-bold text-5xl uppercase dark:text-black">Pricing</p>
                 <p class="text-light max-w-[600px] mt-6 dark:text-black">
                     Choose from our range of affordable pricing options. No hidden fees, transparent and straightforward
@@ -140,46 +145,50 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
                     <div class="lg:px-6">
                         <div class="card rounded-[30px] px-6 py-6">
-                            <div class="flex flex-col space-y-6">
+                            
+                            <div class="relative flex flex-col space-y-6">
+                                <div class="absolute top-0 left-0">
+                                    <div class="blurred-spot"></div>
+                                </div>
                                 <p class="text-light font-semibold text-2xl uppercase px-8">
                                     Our <span class="text-primary">All-inclusive</span>
                                     <br>Hourly rates include
                                 </p>
                                 <button class="bg-secondary rounded-[20px] px-6 py-4 text-light text-lg">Get a FREE quote</button>
                                 <ul class="px-6 space-y-3 mt-4">
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="100" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         Movers and fully equipped Truck
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="200" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE USE OF WARDROBE BOXES FOR YOUR CLOTHES
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE Mattress covers (plastic wrap)
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE Furniture Disassembly and Assembly
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="500" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE Furniture protection (blankets, plastic wrap, and tape)
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="600" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE Unlimited stretch wrap and tape
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="700" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         FREE Dollies, straps, tools during the move - Extra stops per your request
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="800" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         Packing (regular boxes, bubble wrap, kitchen paper not included)
                                     </li>
-                                    <li class="flex items-center text-light">
+                                    <li data-aos="fade-right" data-aos-delay="900" data-aos-duration="600" data-aos-once="true" class="flex items-center text-light">
                                         <img class="mr-3" src="./imgs/blue-tick.svg" >
                                         Included Taxes and Basic Insurance ($ 0.60 per pound per article)
                                     </li>
@@ -188,7 +197,7 @@
                         </div>
                     </div>
                     <div class="flex flex-col">
-                        <div class="card rounded-[30px] px-6 py-4">
+                        <div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-6 py-4">
                             <div class="flex items-center space-x-8">
                                 <img src="./imgs/two-workers.svg" >
                                 <div class="block">
@@ -198,7 +207,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card rounded-[30px] px-6 py-4 mt-6">
+                        <div data-aos="fade-left" data-aos-delay="1200" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-6 py-4 mt-6">
                             <div class="flex items-center space-x-8">
                                 <img src="./imgs/two-workers.svg" >
                                 <div class="block">
@@ -208,7 +217,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="card rounded-[30px] px-6 py-4 mt-6">
+                        <div data-aos="fade-left" data-aos-delay="1400" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-6 py-4 mt-6">
                             <div class="flex items-center space-x-8">
                                 <img src="./imgs/two-workers.svg" >
                                 <div class="block">
@@ -237,7 +246,9 @@
                         </div>
                         <div class="flex flex-col justify-between">
                             <div class="flex flex-col items-center -mt-4">
-                                <img class="w-[150px] md:w-[200px]" src="./imgs/arrow-primary-form.svg" >
+                                <a href="https://app.supermove.co/0/propermoving/request">
+                                    <img class="w-[150px] md:w-[200px]" src="./imgs/arrow-primary-form.svg" >
+                                </a> 
                                 <div class="max-w-[300px] text-lg font-medium mt-10">The fastest and easiest way to contact us for booking</div>
                             </div>
                         </div>
@@ -319,59 +330,53 @@
                 
             </section>
 
-            <section class="relative card w-full lg:mt-20">
+            <section class="relative card w-full mt-20">
                 <div class="absolute bottom-0 left-0">
                     <div class="blurred-primary-spot"></div>
                 </div>
-                <div class="absolute top-1 right-0">
-                    <img class="w-[200px] md:w-[300px]" src="./imgs/Black.png">
+                <div class="absolute top-1 right-1 -z-10">
+                    <img class="w-[150px] md:w-[250px]" src="./imgs/home-deliver.png">
                 </div>
-                <div class="container-sm px-10 py-8 text-light">
+                <div class="container-sm px-6 py-8 text-light">
                     <p class="font-light text-sm mb-8">About Us</p>
-                    <p class="font-mont font-bold text-4xl lg:text-5xl uppercase mb-4">
+                    <p class="font-mont font-bold text-4xl md:text-5xl uppercase mb-4">
                         <span class="text-primary">Proper moving</span> is one of <br> the best moving companies.
                     </p>
                     <p class="max-w-[600px] mb-10">Making ProPer Moving as one of the best companies in moving services by optimally serving the needs and interests of customers so that they are known in Los Angeles and other areas</p>
-                    <div class="flex flex-wrap gap-10 items-start">
+                    <div class="flex flex-wrap gap-16 items-start">
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">5</span>
+                                <span class="font-mont text-primary font-bold text-5xl">5</span>
                                 <img src="./imgs/five-stars.png" width="150">
                             </div>
-                            <p class="text-gray-300">Star rated <br>Yelp and Google</p>
+                            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Star rated <br>Yelp and Google</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">10+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">10+</span>
                             </div>
-                            <p class="text-gray-300">Years experience</p>
+                            <p data-aos="fade-right" data-aos-delay="500" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Years experience</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">3M+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">3M+</span>
                             </div>
-                            <p class="text-gray-300">Happy clients</p>
+                            <p data-aos="fade-right" data-aos-delay="700" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Happy clients</p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">15+</span>
+                                <span class="font-mont text-primary font-bold text-5xl">15+</span>
                                 
                             </div>
-                            <p class="text-gray-300">Reputable realtor <br> work with</p>
+                            <p data-aos="fade-right" data-aos-delay="900" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Reputable realtor <br> work with</p>
                         </div>
+                        
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">25</span>
+                                <span class="font-mont text-primary font-bold text-5xl">700</span>
                                 
                             </div>
-                            <p class="text-gray-300">Schools</p>
-                        </div>
-                        <div class="flex flex-col space-y-4">
-                            <div class="flex items-center space-x-1">
-                                <span class="font-mont text-primary font-bold text-4xl">700</span>
-                                
-                            </div>
-                            <p class="text-gray-300 max-w-[200px]">Regular customers who can always rely on our loyalty</p>
+                            <p data-aos="fade-right" data-aos-delay="1200" data-aos-duration="700" data-aos-once="true" class="text-gray-300 max-w-[200px]">Regular customers who can always rely on our loyalty</p>
                         </div>
                     </div>
                     <div class="rounded-lg bg-two-collegues py-44 mt-8">
@@ -416,17 +421,27 @@
         </section>
 
         <section class="block pt-10">
-            <div class="container-sm px-10 mb-10">
-                <p class="text-light font-bold text-5xl uppercase max-w-[700px] dark:text-black">
+            <div class="relative container-sm px-10 mb-10">
+                <p class="text-light font-bold text-4xl md:text-5xl uppercase max-w-[700px] dark:text-black">
                     don't just take our word for it. see what our happy clients have to say:
                 </p>
+                <div class="absolute top-0 right-0">
+                    <div class="blurred-primary-spot"></div>
+                </div>
             </div>
+            
             <div id="comments" class="comments flex gap-4 w-full overflow-x-auto">
                     
             </div>
         </section>
 
-        <section class="mt-2">
+        <section class="relative mt-2">
+            <div class="hidden md:block absolute bottom-8 left-0">
+                <div class="blurred-comments"></div>
+            </div>
+            <div class="hidden md:block absolute bottom-8 right-0">
+                <div class="blurred-comments"></div>
+            </div>
             <div id="comments-1" class="comments flex gap-4 w-full overflow-x-auto">
                 
             </div>
@@ -476,7 +491,7 @@
                         </div>
                         <p class="text-light">Monday - Sunday: 7 AM – 9 PM</p>
                     </div>
-                    <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</button>
+                    <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold">GET A QUOTE</a>
                 </div>
             </div>
         </div>
@@ -515,7 +530,9 @@
                 </li>
             </ul>
             
-            <button class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold mt-4 hover:scale-105">GET A QUOTE</button>          
+            <div class="flex justify-start mt-6">
+                <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>          
+            </div>
         </div>
     </div>
 

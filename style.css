@@ -4,6 +4,7 @@
 html, body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 .font-mont {
@@ -117,7 +118,22 @@ html, body {
     height: 500px;
     border-radius: 541.349px;
     background: rgba(247, 203, 15, 0.20);
-    filter: blur(200px);
+    filter: blur(150px);
+}
+
+.blurred-comments {
+    min-height: 800px;
+    width: 70px;
+    background-color: white;
+    filter: blur(50px);
+}
+
+.blurred-spot {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: #F7CB0F;
+    filter: blur(50px);
 }
 
 .scroll-dot {
@@ -128,6 +144,10 @@ html, body {
     margin: 0 3px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+}
+
+.content.expanded {
+    max-height: 500px;
 }
 
 .scroll-dot.active {
@@ -152,6 +172,22 @@ html, body {
 
 .pricing-list li {
     list-style-image: url("./imgs/blue-tick.svg");
+}
+
+#tip1:hover .img-tip {
+    content: url("./imgs/boxes-tip1.png");
+}
+
+#tip2:hover .img-tip {
+    content: url("./imgs/space-tip-c.png");
+}
+
+#tip3:hover .img-tip {
+    content: url("./imgs/elevator-tip-c.png");
+}
+
+#tip4:hover .img-tip {
+    content: url("./imgs/boxes-tip-c.png");
 }
 
 .container-lg {
@@ -183,14 +219,12 @@ html, body {
 
 @media (min-width: 1200px) {
     .container-sm {
-        width: 1140px;
+        width: 1180px;
     }
-
 }
 
 @media (min-width: 1400px) {
     .container-sm {
-        width: 1320px;
+        width: 1270px;
     }
-
 }
