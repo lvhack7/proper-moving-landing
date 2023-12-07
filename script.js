@@ -188,16 +188,17 @@ document.addEventListener("DOMContentLoaded", function() {
         accordionItems.forEach((item) => {
             const arrow = item.querySelector('.arrow');
             const content = item.querySelector('.content');
-
+            const content_block = content.querySelector('.content-block')
             arrow.addEventListener("click", function() {
-                if (content.classList.contains("hidden")) {
+                if (content_block.style.maxHeight === '0px') {
                     closeAllItems();
                     arrow.classList.remove("rotate-90");
-                    content.classList.remove("hidden");
-                    content.classList.add("expanded")
+                    //content.classList.remove("hidden");
+                    content_block.style.maxHeight = '500px'
                 } else {
                     arrow.classList.add("rotate-90");
-                    content.classList.add("hidden");
+                    content_block.style.maxHeight = '0px'
+                    //content.classList.add("hidden");
                 }
                 
             });
@@ -208,9 +209,9 @@ document.addEventListener("DOMContentLoaded", function() {
         accordionItems.forEach((item) => {
             const arrow = item.querySelector('.arrow');
             const content = item.querySelector('.content');
+            const content_block = content.querySelector('.content-block')
             arrow.classList.add("rotate-90");
-            item.classList.remove("open");
-            content.classList.add("hidden");
+            content_block.style.maxHeight = '0px'
         });
     }
 })
@@ -395,4 +396,33 @@ function toggleMenu() {
         body.classList.remove("overflow-hidden")
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const hoverElement = document.querySelector('.arrow-container');
+    const circle = document.querySelector('.circle')
+
+    hoverElement.addEventListener('mouseover', function (e) {
+      circle.style.transform = 'scale(1)';
+      updateCirclePosition(e);
+    });
+
+    hoverElement.addEventListener('mousemove', updateCirclePosition);
+
+    hoverElement.addEventListener('mouseout', function () {
+        circle.style.transform = 'scale(0)';
+    });
+
+    function updateCirclePosition(e) {
+      const rect = hoverElement.getBoundingClientRect();
+      const x = e.clientX - rect.left - 15; // Adjust to center the circle on the cursor
+      const y = e.clientY - rect.top - 15; // Adjust to center the circle on the cursor
+
+      // Ensure the circle stays within the boundaries of the hoverElement
+      const maxX = hoverElement.clientWidth - 30;
+      const maxY = hoverElement.clientHeight - 30;
+
+      circle.style.left = `${Math.min(maxX, Math.max(0, x))}px`;
+      circle.style.top = `${Math.min(maxY, Math.max(0, y))}px`;
+    }
+  });
 

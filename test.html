@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .hover-element {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #3490dc; /* Tailwind blue color */
+      border-radius: 50%;
+      pointer-events: none; /* Allow mouse events to go through the circle */
+      transform: scale(0); /* Initially set to scale 0 */
+      transition: transform 0.3s ease-out; /* Smooth scaling transition */
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const hoverElement = document.querySelector('.hover-element');
+      const circle = document.createElement('div');
+      circle.className = 'circle';
+      hoverElement.appendChild(circle);
+
+      hoverElement.addEventListener('mouseover', function () {
+        circle.style.transform = 'scale(1)';
+      });
+
+      hoverElement.addEventListener('mousemove', updateCirclePosition);
+
+      hoverElement.addEventListener('mouseout', function () {
+        circle.style.transform = 'scale(0)';
+      });
+
+      function updateCirclePosition(e) {
+        const rect = hoverElement.getBoundingClientRect();
+        const x = e.clientX - rect.left - 15; // Adjust to center the circle on the cursor
+        const y = e.clientY - rect.top - 15; // Adjust to center the circle on the cursor
+
+        // Ensure the circle stays within the boundaries of the hoverElement
+        const maxX = hoverElement.clientWidth - 30;
+        const maxY = hoverElement.clientHeight - 30;
+
+        circle.style.left = `${Math.min(maxX, Math.max(0, x))}px`;
+        circle.style.top = `${Math.min(maxY, Math.max(0, y))}px`;
+      }
+    });
+  </script>
+</head>
+<body>
+  <div class="hover-element bg-gray-200 p-8 m-4 relative">
+    <h1 class="text-3xl font-bold">Hover Me</h1>
+    <p>This is a hover element.</p>
+  </div>
+</body>
+</html>

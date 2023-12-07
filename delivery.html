@@ -135,21 +135,29 @@
                 </div>
             </section>
 
-
-            <section class="bg-primary rounded-[60px]">
+            <section class="arrow-container bg-primary rounded-[60px] hover:cursor-pointer" id="request" onclick="window.location.href='https://app.supermove.co/0/propermoving/request'">
                 <div class="container-sm py-10 px-10">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div class="text-secondary font-bold font-mont text-4xl md:text-5xl uppercase">
                             Please fill out a move request here:
                         </div>
-                        <div class="flex flex-col justify-between">
+                        <div class="flex flex-col items-end">
                             <div class="flex flex-col items-center -mt-4">
-                                <a href="https://app.supermove.co/0/propermoving/request">
-                                    <img class="w-[150px] md:w-[200px]" src="./imgs/arrow-primary-form.svg" >
-                                </a> 
+                                <div class="flex items-center">
+                                    <img class="target-img icon w-[170px]" src="./imgs/arrow-primary-form.svg" >
+                                </div> 
+                                
                                 <div class="max-w-[300px] text-lg font-medium mt-10">The fastest and easiest way to contact us for booking</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="circle shadow-lg absolute w-32 h-32 bg-secondary rounded-full p-4">
+                    <div class="absolute top-6 right-8">
+                        <img src="./imgs/arrow-circle.svg" >
+                    </div>
+                    <div class="absolute bottom-8 left-4 text-[10px] text-light">
+                        <p>Get a FREE Quote</p>
                     </div>
                 </div>
             </section>

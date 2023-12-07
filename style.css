@@ -190,6 +190,37 @@ html, body {
     content: url("./imgs/boxes-tip-c.png");
 }
 
+.circle {
+    position: absolute;
+    pointer-events: none;
+    transform: scale(0); /* Initially set to scale 0 */
+    transition: transform 0.5s ease-out; /* Disable touch actions to prevent conflicts with drag events */
+}
+
+#request {
+    position: relative;
+}
+
+#request .icon {
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition property for smooth changes */
+}
+
+#request .icon:hover {
+    opacity: 0; /* Set the opacity to 0 on hover to make the previous image disappear */
+    transform: scale(0.8); /* Apply a scale transformation for an additional effect */
+}
+
+#request:hover .icon {
+    content: url("./imgs/pen.svg"); /* Set the content to the new image on hover */
+    opacity: 1; /* Set the opacity back to 1 to make the new image appear */
+    transform: scale(1); /* Apply a scale transformation for an additional effect */
+}
+
+.content-block {
+    max-height: 0px;
+    transition: max-height 0.3s ease-in-out;
+}
+
 .container-lg {
     padding-right: 15px;
     padding-left: 15px;
@@ -226,5 +257,14 @@ html, body {
 @media (min-width: 1400px) {
     .container-sm {
         width: 1270px;
+    }
+}
+
+@keyframes scaleAnimation {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
     }
 }
