@@ -350,8 +350,8 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }   
 
-    let scrollSpeed1 = 0.5; // Increase/decrease for faster/slower scrolling
-    let scrollSpeed2 = 0.5;
+    let scrollSpeed1 = 0.1; // Increase/decrease for faster/slower scrolling
+    let scrollSpeed2 = 0.1;
 
     // Function to scroll the container horizontally
     function scrollHorizontally() {
@@ -359,9 +359,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Reset scroll to 0 when it reaches the end
         if (quoteContainer.scrollLeft + 2 >= quoteContainer.scrollWidth - quoteContainer.clientWidth) {
-            scrollSpeed1 = -0.5;
+            scrollSpeed1 = -0.2;
         } else if (quoteContainer.scrollLeft <= 0) {
-            scrollSpeed1 = 1
+            scrollSpeed1 = 0.5
         }
     }
 
@@ -370,14 +370,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Reset scroll to 0 when it reaches the end
         if (quoteContainer1.scrollLeft + 2 >= quoteContainer1.scrollWidth - quoteContainer1.clientWidth) {
-            scrollSpeed2 = -0.5;
+            scrollSpeed2 = -0.2;
         } else if (quoteContainer1.scrollLeft <= 0) {
-            scrollSpeed2 = 1
+            scrollSpeed2 = 0.5
         }
     }
 
     if (quoteContainer) {
-        setInterval(scrollHorizontally, 5);
+        setInterval(scrollHorizontally, 6);
         setInterval(scrollHorizontally1, 8)
     }
     // Call the scrollHorizontally function at regular intervals
