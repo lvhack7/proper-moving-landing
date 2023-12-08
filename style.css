@@ -221,6 +221,29 @@ html, body {
     transition: max-height 0.3s ease-in-out;
 }
 
+.border-dropdown {
+    border: 2px solid rgba(247, 203, 15, 0.35);
+}
+
+#service-dropdown {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#service-dropdown-mob {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+#mobile-menu {
+    width: 100vw;
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
 .container-lg {
     padding-right: 15px;
     padding-left: 15px;

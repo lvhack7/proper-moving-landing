@@ -43,9 +43,23 @@
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/our-company.html">About Us</a>
                         </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
-                            <a onclick="scrollIntoPage('services')">Services</a>
-                        </li>
+                        <div class="relative">
+                            <a id="service-link" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                Services
+                            </a>
+                            <div id="service-dropdown" class="absolute -left-4 top-8">
+                                <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                                    <ul class="flex flex-col space-y-2">
+                                        <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/moving-tips.html">Moving Tips and FAQs</a>
                         </li>
@@ -355,8 +369,8 @@
         </div>
     </footer>
 
-    <div id="mobile-menu" class="hidden absolute z-20 top-0 left-0 w-full h-screen bg-dark p-2">
-        <div class="container-sm relative h-full">
+    <div id="mobile-menu" class="absolute z-20 top-0 left-0 bg-dark">
+        <div class="flex flex-col space-y-4 container-sm relative h-full">
             <div class="flex items-center justify-between py-8">
                 <img src="./imgs/logo.png" width="150">
                 <button onclick="toggleMenu()">
@@ -371,26 +385,41 @@
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                     <a href="/our-company.html">About Us</a>
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('services')">
-                    Services
-                </li>
+                <div class="relative">
+                    <a id="service-link-mob" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                        Services
+                    </a>
+                    <div id="service-dropdown-mob" class="absolute left-0 top-8">
+                        <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                            <ul class="flex flex-col space-y-2">
+                                <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                     <a href="/moving-tips.html">Moving Tips and FAQs</a>
                 </li>
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
                     Testimonials
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('gallery')">
                     Gallery
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
                     <a href="/contact.html">Contact</a>
                 </li>
             </ul>
             
-            <div class="flex justify-start mt-6">
+            <div class="flex justify-start">
                 <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>          
             </div>
+            
         </div>
     </div>
 

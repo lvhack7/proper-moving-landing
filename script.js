@@ -388,12 +388,10 @@ function toggleMenu() {
     var mobileMenu = document.getElementById('mobile-menu');
     var body = document.body
 
-    if(mobileMenu.classList.contains("hidden")) {
-        mobileMenu.classList.remove("hidden")
-        body.classList.add("overflow-hidden")
+    if(mobileMenu.style.height === '0px') {
+        mobileMenu.style.height = '100vh'
     } else {
-        mobileMenu.classList.add("hidden")
-        body.classList.remove("overflow-hidden")
+        mobileMenu.style.height = '0px'
     }
 }
 
@@ -425,4 +423,27 @@ document.addEventListener('DOMContentLoaded', function () {
       circle.style.top = `${Math.min(maxY, Math.max(0, y))}px`;
     }
   });
+
+const serviceLink = document.getElementById("service-link")
+const dropdown = document.getElementById("service-dropdown")
+
+const serviceLinkMob = document.getElementById("service-link-mob")
+const dropdownMob = document.getElementById("service-dropdown-mob")
+
+serviceLinkMob.addEventListener("click", function() {
+    if (dropdownMob.style.maxHeight === '0px') {
+        dropdownMob.style.maxHeight = '500px'
+    } else {
+        dropdownMob.style.maxHeight = '0px'
+    }
+})
+
+serviceLink.addEventListener("click", function() {
+    if (dropdown.style.maxHeight === '0px') {
+        dropdown.style.maxHeight = '500px'
+    } else {
+        dropdown.style.maxHeight = '0px'
+    }
+})
+
 

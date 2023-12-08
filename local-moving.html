@@ -40,9 +40,23 @@
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/our-company.html">About Us</a>
                         </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('services')">
-                            Services
-                        </li>
+                        <div class="relative">
+                            <a id="service-link" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                Services
+                            </a>
+                            <div id="service-dropdown" class="absolute -left-4 top-8">
+                                <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                                    <ul class="flex flex-col space-y-2">
+                                        <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
+                                        <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                             <a href="/moving-tips.html">Moving Tips and FAQs</a>
                         </li>
@@ -144,7 +158,7 @@
                 </p>
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10">
                     <div class="xl:px-12">
-                        <div class="card rounded-[30px] px-8 pt-2 pb-4">
+                        <div class="card rounded-[30px] px-8 pt-2 pb-4 shadow">
                             
                             <div class="relative flex flex-col space-y-4">
                                 <div class="absolute top-0 left-0">
@@ -198,33 +212,33 @@
                     </div>
                     <div class="flex flex-col justify-between h-full">
                         <div class="flex flex-col">
-                            <div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4">
+                            <div data-aos="fade-left" data-aos-delay="1000" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4 shadow">
                                 <div class="flex items-center space-x-8">
                                     <img src="./imgs/two-workers.svg" >
                                     <div class="block">
-                                        <p class="text-[#F8EFEFB2] text-md">2 movers and a truck</p>
+                                        <p class="text-primary text-md">2 movers and a truck</p>
                                         <p class="text-light text-lg mt-2 uppercase font-semibold">Starts at $ 99 cash /<br>
                                             $ 109 card </p>
                                     </div>
                                 </div>
                             </div>
-                            <div data-aos="fade-left" data-aos-delay="1200" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4 mt-6">
+                            <div data-aos="fade-left" data-aos-delay="1200" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4 mt-6 shadow">
                                 <div class="flex items-center space-x-8">
-                                    <img src="./imgs/two-workers.svg" >
+                                    <img src="./imgs/three-workers.svg" >
                                     <div class="block">
-                                        <p class="text-[#F8EFEFB2] text-md">2 movers and a truck</p>
-                                        <p class="text-light text-lg mt-2 uppercase font-semibold">Starts at $ 99 cash /<br>
-                                            $ 109 card </p>
+                                        <p class="text-primary text-md">3 movers and a truck</p>
+                                        <p class="text-light text-lg mt-2 uppercase font-semibold">Starts at $ 130 cash/<br>
+                                            $ 140 card </p>
                                     </div>
                                 </div>
                             </div>
-                            <div data-aos="fade-left" data-aos-delay="1400" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4 mt-6">
+                            <div data-aos="fade-left" data-aos-delay="1400" data-aos-duration="600" data-aos-once="true" class="card rounded-[25px] px-12 py-4 mt-6 shadow">
                                 <div class="flex items-center space-x-8">
-                                    <img src="./imgs/two-workers.svg" >
+                                    <img src="./imgs/four-workers.svg" >
                                     <div class="block">
-                                        <p class="text-[#F8EFEFB2] text-md">2 movers and a truck</p>
-                                        <p class="text-light text-lg mt-2 uppercase font-semibold">Starts at $ 99 cash /<br>
-                                            $ 109 card </p>
+                                        <p class="text-primary text-md">4 movers and a truck</p>
+                                        <p class="text-light text-lg mt-2 uppercase font-semibold">Starts at $ 160 cash /<br>
+                                            $ 170 card </p>
                                     </div>
                                 </div>
                             </div>
@@ -509,8 +523,8 @@
         </div>
     </footer>
 
-    <div id="mobile-menu" class="hidden absolute z-20 top-0 left-0 w-full h-screen bg-dark p-2">
-        <div class="container-sm relative h-full">
+    <div id="mobile-menu" class="absolute z-20 top-0 left-0 bg-dark">
+        <div class="flex flex-col space-y-4 container-sm relative h-full">
             <div class="flex items-center justify-between py-8">
                 <img src="./imgs/logo.png" width="150">
                 <button onclick="toggleMenu()">
@@ -525,26 +539,41 @@
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                     <a href="/our-company.html">About Us</a>
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('services')">
-                    Services
-                </li>
+                <div class="relative">
+                    <a id="service-link-mob" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                        Services
+                    </a>
+                    <div id="service-dropdown-mob" class="absolute left-0 top-8">
+                        <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                            <ul class="flex flex-col space-y-2">
+                                <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
+                                <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium">
                     <a href="/moving-tips.html">Moving Tips and FAQs</a>
                 </li>
                 <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
                     Testimonials
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('gallery')">
                     Gallery
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
                     <a href="/contact.html">Contact</a>
                 </li>
             </ul>
             
-            <div class="flex justify-start mt-6">
+            <div class="flex justify-start">
                 <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>          
             </div>
+            
         </div>
     </div>
 
