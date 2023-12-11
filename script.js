@@ -102,6 +102,22 @@ const comments2 = [
     },
 ]
 
+function detectMob() {
+    const toMatch = [
+        /Android/i,
+        /webOS/i,
+        /iPhone/i,
+        /iPad/i,
+        /iPod/i,
+        /BlackBerry/i,
+        /Windows Phone/i
+    ];
+    
+    return toMatch.some((toMatchItem) => {
+        return navigator.userAgent.match(toMatchItem);
+    });
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     
     const darkModeToggle = document.getElementById('theme-toggle');
@@ -400,8 +416,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const circle = document.querySelector('.circle')
 
     hoverElement.addEventListener('mouseover', function (e) {
-      circle.style.transform = 'scale(1)';
-      updateCirclePosition(e);
+      if (detectMob() === false) {
+        circle.style.transform = 'scale(1)';
+        updateCirclePosition(e);
+      }
     });
 
     hoverElement.addEventListener('mousemove', updateCirclePosition);

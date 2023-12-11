@@ -176,7 +176,7 @@
                                 <span class="font-mont text-primary font-bold text-5xl">5</span>
                                 <img src="./imgs/five-stars.png" width="150">
                             </div>
-                            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Star rated <br>Yelp and Google</p>
+                            <p data-aos="fade-right" data-aos-delay="300" data-aos-duration="600" data-aos-once="true" class="text-gray-300">Star rated <br><a class="text-[#FC423C] underline" href="https://www.yelp.com/biz/proper-moving-company-los-angeles-3">Yelp</a> and <a class="text-[#FC423C] underline" href="https://maps.app.goo.gl/hgrJbLZzUAtUGJT19?g_st=iw">Google</a></p>
                         </div>
                         <div class="flex flex-col space-y-4">
                             <div class="flex items-center space-x-1">
@@ -319,16 +319,20 @@
                 </div>
             </section>
 
-            <section class="arrow-container bg-primary rounded-[60px] hover:cursor-pointer" id="request" onclick="window.location.href='https://app.supermove.co/0/propermoving/request'">
-                <div class="container-sm py-10 px-10">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="text-secondary font-bold font-mont text-4xl md:text-5xl uppercase">
+            <section class="arrow-container bg-primary rounded-[40px] sm:rounded-[60px] hover:cursor-pointer" id="request" onclick="window.location.href='https://app.supermove.co/0/propermoving/request'">
+                <div class="container-sm py-10 px-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-10">
+                        <div class="text-secondary font-bold font-mont text-3xl sm:text-4xl md:text-5xl uppercase">
                             Please fill out a move request here:
                         </div>
-                        <div class="flex flex-col items-end">
-                            <div class="flex flex-col items-center -mt-4">
+                        <div class="flex flex-col sm:items-end">
+                            <div class="flex flex-col sm:items-start sm:items-center -mt-4">
                                 <div class="flex items-center">
-                                    <img class="target-img icon w-[170px]" src="./imgs/arrow-primary-form.svg" >
+                                    <a href="https://app.supermove.co/0/propermoving/request" class="sm:hidden relative flex items-center justify-between space-x-4 bg-secondary text-light px-8 py-4 rounded-[20px] text-lg">
+                                        <span>Get a FREE Quote</span>
+                                        <img src="./imgs/arrow-circle.svg" >
+                                    </a>
+                                    <img class="hidden sm:block target-img icon w-[170px]" src="./imgs/arrow-primary-form.svg" >
                                 </div> 
                                 
                                 <div class="max-w-[300px] text-lg font-medium mt-10">The fastest and easiest way to contact us for booking</div>
@@ -467,19 +471,19 @@
             </div>
             
             <ul class="flex flex-col space-y-6">
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light">
                     <a href="/index.html">Home</a>
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light">
                     <a href="/our-company.html">About Us</a>
                 </li>
-                <div class="relative">
-                    <a id="service-link-mob" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <div>
+                    <div id="service-link-mob" class="text-light font-light">
                         Services
-                    </a>
-                    <div id="service-dropdown-mob" class="absolute left-0 top-8">
-                        <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
-                            <ul class="flex flex-col space-y-2">
+                    </div>
+                    <div id="service-dropdown-mob" class="px-1">
+                        <div class="px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                            <ul class="flex flex-col space-y-3">
                                 <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
                                 <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
                                 <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
@@ -490,16 +494,16 @@
                         </div>
                     </div>
                 </div>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                <li class="text-light font-light">
                     <a href="/moving-tips.html">Moving Tips and FAQs</a>
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('comments')">
+                <li class="text-light font-light" onclick="scrollInto('comments')">
                     Testimonials
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('gallery')">
+                <li class="text-light font-light" onclick="scrollInto('gallery')">
                     Gallery
                 </li>
-                <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollInto('services')">
+                <li class="text-light font-light" onclick="scrollInto('services')">
                     <a href="/contact.html">Contact</a>
                 </li>
             </ul>
