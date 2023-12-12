@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @keyframes count {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    .counter {
+      font-size: 24px;
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      animation: count 1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div class="counter" data-count="700">0</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var counterElement = document.querySelector('.counter');
+    var targetCount = parseInt(counterElement.getAttribute('data-count'), 10);
+    var duration = 500; // 1 second
+
+    var interval = duration / targetCount;
+    var count = 0;
+
+    var counterAnimation = setInterval(function () {
+      count += 1;
+      counterElement.textContent = count;
+
+      if (count === targetCount) {
+        clearInterval(counterAnimation);
+      }
+    }, interval);
+  });
+</script>
+
+</body>
+</html>

@@ -374,7 +374,7 @@ document.addEventListener("DOMContentLoaded", function() {
         quoteContainer.scrollLeft += scrollSpeed1;
 
         // Reset scroll to 0 when it reaches the end
-        if (quoteContainer.scrollLeft + 2 >= quoteContainer.scrollWidth - quoteContainer.clientWidth) {
+        if (quoteContainer.scrollLeft + 1 >= quoteContainer.scrollWidth - quoteContainer.clientWidth) {
             scrollSpeed1 = -0.2;
         } else if (quoteContainer.scrollLeft <= 0) {
             scrollSpeed1 = 0.5
@@ -385,7 +385,7 @@ document.addEventListener("DOMContentLoaded", function() {
         quoteContainer1.scrollLeft += scrollSpeed2;
 
         // Reset scroll to 0 when it reaches the end
-        if (quoteContainer1.scrollLeft + 2 >= quoteContainer1.scrollWidth - quoteContainer1.clientWidth) {
+        if (quoteContainer1.scrollLeft + 1 >= quoteContainer1.scrollWidth - quoteContainer1.clientWidth) {
             scrollSpeed2 = -0.2;
         } else if (quoteContainer1.scrollLeft <= 0) {
             scrollSpeed2 = 0.5
@@ -397,7 +397,6 @@ document.addEventListener("DOMContentLoaded", function() {
         setInterval(scrollHorizontally1, 8)
     }
     // Call the scrollHorizontally function at regular intervals
-
 })
 
 function toggleMenu() {
@@ -463,5 +462,39 @@ serviceLink.addEventListener("click", function() {
         dropdown.style.maxHeight = '0px'
     }
 })
+
+document.addEventListener('DOMContentLoaded', function () {
+    var counterElements = document.querySelectorAll('.counter');
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+          startCounterAnimation(entry.target);
+        }
+      });
+    }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+    counterElements.forEach(function(counterElement) {
+      observer.observe(counterElement);
+    });
+
+    function startCounterAnimation(element) {
+      element.classList.add('counted');
+
+      var targetCount = parseInt(element.getAttribute('data-count'), 10);
+      var duration = 1200; // 1 second
+      var interval = duration / targetCount;
+      var count = 0;
+
+      var counterAnimation = setInterval(function () {
+        count += 1;
+        element.textContent = count;
+
+        if (count === targetCount) {
+          clearInterval(counterAnimation);
+        }
+      }, interval);
+    }
+  });
 
 
