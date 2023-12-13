@@ -27,62 +27,64 @@
 </head>
 <body class="flex flex-col min-h-[100vh] bg-dark">
     <header>
-        <div class="container-sm">
-            <nav class="flex items-center border-b border-[#F8EFEF73] justify-between w-full py-4">
-                <a href="/index.html" class="flex">
-                    <img src="./imgs/logo.png" width="140">
-                </a>
-                <div class="hidden xl:flex">
-                    <ul class="flex items-center justify-between space-x-3 xl:space-x-6">
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
-                            <a href="/index.html">Home</a>
-                        </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
-                            <a href="/our-company.html">About Us</a>
-                        </li>
-                        <div class="relative">
-                            <a id="service-link-mob" class="text-light font-light hover:cursor-pointer hover:font-medium">
-                                Services
-                            </a>
-                            <div id="service-dropdown-mob" class="absolute -left-4 top-8">
-                                <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
-                                    <ul class="flex flex-col space-y-2">
-                                        <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
-                                        <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
-                                        <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
-                                        <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
-                                        <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
-                                        <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
-                                    </ul>
+        <div id="navbar" class="fixed top-0 z-20 w-full transition ease-in-out duration-300 bg-dark">
+            <nav class="container-sm">
+                <div class="flex items-center border-b border-[#F8EFEF73] justify-between w-full py-4">
+                    <a href="/index.html" class="flex">
+                        <img src="./imgs/logo.png" width="140">
+                    </a>
+                    <div class="hidden xl:flex">
+                        <ul class="flex items-center justify-between space-x-3 xl:space-x-6">
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                <a href="/index.html">Home</a>
+                            </li>
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                <a href="/our-company.html">About Us</a>
+                            </li>
+                            <div class="relative">
+                                <a id="service-link-mob" class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                    Services
+                                </a>
+                                <div id="service-dropdown-mob" class="absolute -left-4 top-8">
+                                    <div class="border-dropdown px-3 py-4 shadow w-56 rounded-[10px] bg-dark">
+                                        <ul class="flex flex-col space-y-2">
+                                            <li class="text-light font-light hover:text-primary"><a href="/local-moving.html">Local moving</a></li>
+                                            <li class="text-light font-light hover:text-primary"><a href="/long-distance-moving.html">Long-distance moving </a></li>
+                                            <li class="text-light font-light hover:text-primary"><a href="/commercial-moving.html">Commercial moving</a></li>
+                                            <li class="text-light font-light hover:text-primary"><a href="/packing-and-unpacking.html">Packing and unpacking</a></li>
+                                            <li class="text-light font-light hover:text-primary"><a href="/moving-labor.html">Moving labor</a></li>
+                                            <li class="text-light font-light hover:text-primary"><a href="/delivery.html">Delivery</a></li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium">
-                            <a href="/moving-tips.html">Moving Tips and FAQs</a>
-                        </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('comments')">
-                            Testimonials
-                        </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
-                            Gallery
-                        </li>
-                        <li class="text-light font-light hover:cursor-pointer hover:font-medium" >
-                            <a href="/contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="hidden xl:flex items-center space-x-4">
-                    <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>
-                    <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
-                </div>
-                <div class="xl:hidden flex hover:cursor-pointer hover:scale-105" onclick="toggleMenu()">
-                    <img src="./imgs/menu-icon.svg" width="45" >
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium">
+                                <a href="/moving-tips.html">Moving Tips and FAQs</a>
+                            </li>
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('comments')">
+                                Testimonials
+                            </li>
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium" onclick="scrollIntoPage('gallery')">
+                                Gallery
+                            </li>
+                            <li class="text-light font-light hover:cursor-pointer hover:font-medium" >
+                                <a href="/contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hidden xl:flex items-center space-x-4">
+                        <a href="https://app.supermove.co/0/propermoving/request" class="bg-primary text-secondary text-md px-8 py-3 rounded-full font-semibold hover:scale-105">GET A QUOTE</a>
+                        <img id="theme-toggle" width="35" class="hover:cursor-pointer hover:scale-105" >
+                    </div>
+                    <div class="xl:hidden flex hover:cursor-pointer hover:scale-105" onclick="toggleMenu()">
+                        <img src="./imgs/menu-icon.svg" width="45" >
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
     <main class="bg-dark dark:bg-[#F8F2F2]">
-        <section class="px-2 pt-32 pb-52">
+        <section class="px-2 pt-44 pb-52">
             <div class="container-sm">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:divide-x md:divide-gray-500">
                     <div class="flex flex-col space-y-6">

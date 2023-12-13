@@ -150,15 +150,17 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 function scrollInto(id) {
-    if (!document.getElementById('mobile-menu').classList.contains("hidden")) {
-        toggleMenu()
-    }
+    // if (!document.getElementById('mobile-menu').classList.contains("hidden")) {
+    //     toggleMenu()
+    // }
     const componentElement = document.getElementById(id);
 
     if (id === 'comments') {
-        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 200);
+        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight);
+    } else if (id === 'gallery') {
+        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 300);
     } else {
-        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 500);
+        window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight);
     }
 }
 
@@ -403,6 +405,7 @@ function toggleMenu() {
     var body = document.body
 
     if(mobileMenu.style.height === '0px') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         mobileMenu.style.height = '100vh'
     } else {
         mobileMenu.style.height = '0px'
