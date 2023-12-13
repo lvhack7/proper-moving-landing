@@ -154,8 +154,7 @@ function scrollInto(id) {
         toggleMenu()
     }
     const componentElement = document.getElementById(id);
-    console.log(id)
-    // Scroll to the target element smoothly
+
     if (id === 'comments') {
         window.scrollTo(0, componentElement.offsetTop - document.getElementsByTagName('header')[0].offsetHeight + 200);
     } else {
